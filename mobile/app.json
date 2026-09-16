@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "Kalisteni",
+    "slug": "kalisteni",
+    "scheme": "kalisteni",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#06070A",
+    "newArchEnabled": true,
+    "primaryColor": "#D7FF3E",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "ge.kalisteni.app",
+      "config": { "usesNonExemptEncryption": false },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "მოედნების რუკაზე ახლომდებარე ადგილების საჩვენებლად და check-in-ის დასადასტურებლად.",
+        "NSCameraUsageDescription": "მოედნის ფოტოს გადასაღებად.",
+        "NSPhotoLibraryUsageDescription": "მოედნის ფოტოს ასატვირთად.",
+        "UIBackgroundModes": ["audio"]
+      }
+    },
+    "android": {
+      "package": "ge.kalisteni.app",
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "adaptiveIcon": {
+        "backgroundColor": "#06070A",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "VIBRATE",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "web": { "bundler": "metro", "output": "single", "favicon": "./assets/favicon.png" },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-localization",
+      "expo-secure-store",
+      "expo-sqlite",
+      "expo-video",
+      "expo-audio",
+      "expo-web-browser",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#06070A",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 180,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "მოედნების რუკაზე ახლომდებარე ადგილების საჩვენებლად და check-in-ის დასადასტურებლად."
+        }
+      ],
+      [
+        "expo-notifications",
+        { "color": "#D7FF3E", "defaultChannel": "default" }
+      ]
+    ],
+    "experiments": { "typedRoutes": true, "reactCompiler": true },
+    "extra": {
+      "apiUrl": "http://localhost:8000/api/v1",
+      "eas": { "projectId": "00000000-0000-0000-0000-000000000000" }
+    }
+  }
+}

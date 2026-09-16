@@ -1,0 +1,3075 @@
+[
+ {
+  "slug": "wall-push-up",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 0.3,
+  "level_min": 1,
+  "level_max": 2,
+  "equipment": [],
+  "primary_muscles": [
+   "chest",
+   "triceps"
+  ],
+  "secondary_muscles": [
+   "shoulders"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "კედლის აჭიმი",
+    "short_desc": "უმარტივესი აჭიმი — დატვირთვა მინიმალურია",
+    "instructions": [
+     "დადექი კედლიდან ერთ ნაბიჯზე, ხელები მხრების სიგანეზე",
+     "მოხარე იდაყვები და მიუახლოვდი კედელს",
+     "გულმკერდი თითქმის შეეხოს კედელს",
+     "გაასწორე ხელები კონტროლირებულად"
+    ],
+    "common_mistakes": [
+     "სხეული ტყდება წელში",
+     "იდაყვები გვერდებზე იშლება 90°-ზე მეტად",
+     "მოძრაობა ძალიან სწრაფია"
+    ]
+   },
+   "ru": {
+    "name": "Отжимания от стены",
+    "short_desc": "Самый лёгкий вариант — минимальная нагрузка",
+    "instructions": [
+     "Встань в шаге от стены, руки на ширине плеч",
+     "Согни локти и приблизься к стене",
+     "Грудь почти касается стены",
+     "Выпрямись под контролем"
+    ],
+    "common_mistakes": [
+     "Корпус ломается в пояснице",
+     "Локти разводятся шире 90°",
+     "Движение слишком быстрое"
+    ]
+   },
+   "en": {
+    "name": "Wall push-up",
+    "short_desc": "The easiest push-up variant — minimal load",
+    "instructions": [
+     "Stand one step from the wall, hands shoulder-width",
+     "Bend the elbows and move toward the wall",
+     "Chest nearly touches the wall",
+     "Press back under control"
+    ],
+    "common_mistakes": [
+     "Hips break at the lower back",
+     "Elbows flare past 90°",
+     "Moving too fast"
+    ]
+   }
+  },
+  "progression_to": "incline-push-up"
+ },
+ {
+  "slug": "incline-push-up",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 0.6,
+  "level_min": 1,
+  "level_max": 3,
+  "equipment": [],
+  "primary_muscles": [
+   "chest",
+   "triceps"
+  ],
+  "secondary_muscles": [
+   "shoulders",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "დახრილი აჭიმი",
+    "short_desc": "ხელები ამაღლებულ ზედაპირზე",
+    "instructions": [
+     "დაეყრდენი სკამს ან პარაპეტს, ხელები მხრების სიგანეზე",
+     "სხეული ერთ სწორ ხაზზეა ქუსლიდან თავამდე",
+     "დაწიე გულმკერდი ზედაპირამდე",
+     "ამოიწიე კონტროლით"
+    ],
+    "common_mistakes": [
+     "მუცელი ჩამოვარდნილია",
+     "მხრები ყურებთან იწევა",
+     "მთლიან ამპლიტუდაზე არ მუშაობს"
+    ]
+   },
+   "ru": {
+    "name": "Отжимания с возвышения",
+    "short_desc": "Руки на возвышенной опоре",
+    "instructions": [
+     "Обопрись о скамью или парапет, руки на ширине плеч",
+     "Тело — прямая линия от пяток до головы",
+     "Опусти грудь к опоре",
+     "Выжми себя вверх под контролем"
+    ],
+    "common_mistakes": [
+     "Живот провисает",
+     "Плечи поднимаются к ушам",
+     "Работа не в полной амплитуде"
+    ]
+   },
+   "en": {
+    "name": "Incline push-up",
+    "short_desc": "Hands elevated on a bench or rail",
+    "instructions": [
+     "Set hands shoulder-width on a bench or rail",
+     "Body in one line from heels to head",
+     "Lower the chest to the surface",
+     "Press back up under control"
+    ],
+    "common_mistakes": [
+     "Hips sagging",
+     "Shoulders shrugging toward the ears",
+     "Partial range of motion"
+    ]
+   }
+  },
+  "progression_to": "knee-push-up"
+ },
+ {
+  "slug": "knee-push-up",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 0.7,
+  "level_min": 1,
+  "level_max": 2,
+  "equipment": [],
+  "primary_muscles": [
+   "chest",
+   "triceps"
+  ],
+  "secondary_muscles": [
+   "shoulders"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "აჭიმი მუხლებზე",
+    "short_desc": "გარდამავალი საფეხური სრულ აჭიმამდე",
+    "instructions": [
+     "დაიჩოქე, ხელები მხრებზე ოდნავ განიერად",
+     "მუხლიდან თავამდე სწორი ხაზი",
+     "ჩადი სანამ გულმკერდი იატაკს არ მიუახლოვდება",
+     "ამოდი ხელების სრულ გასწორებამდე"
+    ],
+    "common_mistakes": [
+     "მენჯი უკან გადადის",
+     "ხელისგულები მხრებზე წინაა",
+     "სხეული იღუნება"
+    ]
+   },
+   "ru": {
+    "name": "Отжимания с колен",
+    "short_desc": "Переходный этап к полным отжиманиям",
+    "instructions": [
+     "Встань на колени, руки чуть шире плеч",
+     "Прямая линия от колена до головы",
+     "Опускайся, пока грудь не приблизится к полу",
+     "Выжми до полного выпрямления рук"
+    ],
+    "common_mistakes": [
+     "Таз уходит назад",
+     "Ладони слишком далеко вперёд",
+     "Корпус прогибается"
+    ]
+   },
+   "en": {
+    "name": "Knee push-up",
+    "short_desc": "A bridge to the full push-up",
+    "instructions": [
+     "Kneel down, hands slightly wider than shoulders",
+     "Straight line from knee to head",
+     "Lower until the chest is close to the floor",
+     "Press to full lockout"
+    ],
+    "common_mistakes": [
+     "Hips drifting back",
+     "Hands too far forward of the shoulders",
+     "Body sagging"
+    ]
+   }
+  },
+  "progression_to": "push-up"
+ },
+ {
+  "slug": "push-up",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 1.0,
+  "level_min": 2,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "chest",
+   "triceps"
+  ],
+  "secondary_muscles": [
+   "shoulders",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "აჭიმი",
+    "short_desc": "საბაზისო სავარჯიშო — 1 გამეორება = 1.0 XP",
+    "instructions": [
+     "ხელები მხრებზე ოდნავ განიერად, თითები წინ",
+     "სხეული ერთ ხაზზე: ქუსლი — მენჯი — თავი",
+     "ჩადი სანამ გულმკერდი იატაკს არ მიუახლოვდება",
+     "იდაყვები სხეულთან ~45°-ზე, არა 90°-ზე"
+    ],
+    "common_mistakes": [
+     "მენჯი ჩამოვარდნილია ან ზემოთაა აწეული",
+     "იდაყვები T-ს ფორმაზე იშლება",
+     "კისერი წინ იწევა",
+     "ნახევარი ამპლიტუდა"
+    ]
+   },
+   "ru": {
+    "name": "Отжимания",
+    "short_desc": "Базовое упражнение — 1 повтор = 1.0 XP",
+    "instructions": [
+     "Руки чуть шире плеч, пальцы вперёд",
+     "Тело в одну линию: пятка — таз — голова",
+     "Опускайся, пока грудь не приблизится к полу",
+     "Локти под ~45° к корпусу, не 90°"
+    ],
+    "common_mistakes": [
+     "Таз провисает или задран",
+     "Локти разведены в букву Т",
+     "Шея тянется вперёд",
+     "Половинная амплитуда"
+    ]
+   },
+   "en": {
+    "name": "Push-up",
+    "short_desc": "The baseline exercise — 1 rep = 1.0 XP",
+    "instructions": [
+     "Hands slightly wider than shoulders, fingers forward",
+     "Body in one line: heel — hip — head",
+     "Lower until the chest is close to the floor",
+     "Elbows about 45° to the torso, not 90°"
+    ],
+    "common_mistakes": [
+     "Hips sagging or piked",
+     "Elbows flared into a T",
+     "Neck craning forward",
+     "Half range of motion"
+    ]
+   }
+  },
+  "progression_to": "diamond-push-up"
+ },
+ {
+  "slug": "diamond-push-up",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 1.6,
+  "level_min": 3,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "triceps",
+   "chest"
+  ],
+  "secondary_muscles": [
+   "shoulders"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ბრილიანტის აჭიმი",
+    "short_desc": "ხელები ერთად — აქცენტი ტრიცეფსზე",
+    "instructions": [
+     "ხელისგულები გულმკერდის ქვეშ, ცერები და საჩვენებლები რომბს ქმნიან",
+     "იდაყვები სხეულთან ახლოს მიდის უკან",
+     "ჩადი სანამ გულმკერდი ხელებს არ შეეხება",
+     "ამოდი ტრიცეფსის ძალით"
+    ],
+    "common_mistakes": [
+     "იდაყვები გვერდებზე იშლება",
+     "მენჯი ზემოთაა აწეული",
+     "მაჯაზე ზეწოლა — გახურება აუცილებელია"
+    ]
+   },
+   "ru": {
+    "name": "Алмазные отжимания",
+    "short_desc": "Руки вместе — акцент на трицепс",
+    "instructions": [
+     "Ладони под грудью, большие и указательные пальцы образуют ромб",
+     "Локти идут назад близко к корпусу",
+     "Опускайся, пока грудь не коснётся рук",
+     "Выжми силой трицепса"
+    ],
+    "common_mistakes": [
+     "Локти разводятся в стороны",
+     "Таз задран",
+     "Нагрузка на запястья — разминка обязательна"
+    ]
+   },
+   "en": {
+    "name": "Diamond push-up",
+    "short_desc": "Hands together — triceps emphasis",
+    "instructions": [
+     "Palms under the chest, thumbs and index fingers forming a diamond",
+     "Elbows track back close to the body",
+     "Lower until the chest touches the hands",
+     "Press up with the triceps"
+    ],
+    "common_mistakes": [
+     "Elbows flaring out",
+     "Hips piked up",
+     "Wrist strain — warm them up first"
+    ]
+   }
+  },
+  "progression_to": "archer-push-up"
+ },
+ {
+  "slug": "pseudo-planche-push-up",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 3.5,
+  "level_min": 4,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "chest",
+   "shoulders"
+  ],
+  "secondary_muscles": [
+   "triceps",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ფსევდო-პლანშის აჭიმი",
+    "short_desc": "ხელები მენჯთან — planche-ის მოსამზადებელი",
+    "instructions": [
+     "ხელისგულები წელის დონეზე, თითები უკან ან გვერდზე",
+     "სხეული წინ გადმოწეული, მხრები ხელებზე წინაა",
+     "ჩადი წინ გადმოხრილი პოზიციის შენარჩუნებით",
+     "ამოდი მხრების წინ დატოვებით"
+    ],
+    "common_mistakes": [
+     "მხრები ხელებამდე უკან იწევა — სავარჯიშო კარგავს აზრს",
+     "მაჯები არ არის გახურებული",
+     "წელი იღუნება"
+    ]
+   },
+   "ru": {
+    "name": "Псевдо-планш отжимания",
+    "short_desc": "Руки у таза — подготовка к planche",
+    "instructions": [
+     "Ладони на уровне пояса, пальцы назад или в стороны",
+     "Корпус подан вперёд, плечи впереди кистей",
+     "Опускайся, сохраняя наклон вперёд",
+     "Выжимай, оставляя плечи впереди"
+    ],
+    "common_mistakes": [
+     "Плечи уходят назад за кисти — смысл теряется",
+     "Запястья не разогреты",
+     "Поясница прогибается"
+    ]
+   },
+   "en": {
+    "name": "Pseudo planche push-up",
+    "short_desc": "Hands at hip level — planche preparation",
+    "instructions": [
+     "Palms at waist level, fingers back or out",
+     "Lean forward so shoulders are ahead of the hands",
+     "Lower while keeping the forward lean",
+     "Press up keeping shoulders forward"
+    ],
+    "common_mistakes": [
+     "Shoulders drifting back over the hands — the point is lost",
+     "Wrists not warmed up",
+     "Lower back arching"
+    ]
+   }
+  },
+  "progression_to": "one-arm-push-up"
+ },
+ {
+  "slug": "archer-push-up",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 2.2,
+  "level_min": 4,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "chest",
+   "triceps"
+  ],
+  "secondary_muscles": [
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "მშვილდოსნის აჭიმი",
+    "short_desc": "ერთ მკლავზე გადატანილი დატვირთვა",
+    "instructions": [
+     "ხელები ჩვეულებრივზე ბევრად განიერად",
+     "ჩადი ერთი მკლავისკენ, მეორე სწორდება",
+     "სამუშაო მკლავი 90°-ზე იხრება",
+     "ამოდი და გაიმეორე მეორე მხარეს"
+    ],
+    "common_mistakes": [
+     "სწორი მკლავი იდაყვში იღუნება",
+     "მენჯი ბრუნავს",
+     "ამპლიტუდა არათანაბარია მხარეებს შორის"
+    ]
+   },
+   "ru": {
+    "name": "Отжимания лучника",
+    "short_desc": "Нагрузка смещена на одну руку",
+    "instructions": [
+     "Руки значительно шире обычного",
+     "Опускайся к одной руке, вторая выпрямляется",
+     "Рабочая рука сгибается до 90°",
+     "Поднимись и повтори в другую сторону"
+    ],
+    "common_mistakes": [
+     "Прямая рука сгибается в локте",
+     "Таз разворачивается",
+     "Амплитуда разная на разных сторонах"
+    ]
+   },
+   "en": {
+    "name": "Archer push-up",
+    "short_desc": "Load shifted onto one arm",
+    "instructions": [
+     "Hands much wider than normal",
+     "Lower toward one arm while the other straightens",
+     "Working arm bends to about 90°",
+     "Press up and repeat on the other side"
+    ],
+    "common_mistakes": [
+     "Straight arm bending at the elbow",
+     "Hips rotating",
+     "Uneven range between sides"
+    ]
+   }
+  },
+  "progression_to": "pseudo-planche-push-up"
+ },
+ {
+  "slug": "one-arm-push-up",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 9.0,
+  "level_min": 5,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "chest",
+   "triceps"
+  ],
+  "secondary_muscles": [
+   "core",
+   "obliques"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": true,
+  "unlock_bonus_xp": 600,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ერთხელა აჭიმი",
+    "short_desc": "მაქსიმალური სირთულის აჭიმი",
+    "instructions": [
+     "ფეხები განიერად, ერთი ხელი ზურგს უკან",
+     "სამუშაო ხელი გულმკერდის ცენტრის ქვეშ",
+     "ჩადი კონტროლით, კორპუსი დაჭიმულია",
+     "ამოდი ბრუნვის მინიმუმით"
+    ],
+    "common_mistakes": [
+     "სხეული ბრუნავს გვერდზე",
+     "ფეხები ძალიან ვიწროდაა",
+     "ნახევარი ამპლიტუდა"
+    ]
+   },
+   "ru": {
+    "name": "Отжимания на одной руке",
+    "short_desc": "Максимальная сложность",
+    "instructions": [
+     "Ноги широко, вторая рука за спиной",
+     "Рабочая рука под центром груди",
+     "Опускайся под контролем, корпус напряжён",
+     "Выжми с минимальным разворотом"
+    ],
+    "common_mistakes": [
+     "Корпус заваливается набок",
+     "Ноги слишком узко",
+     "Половинная амплитуда"
+    ]
+   },
+   "en": {
+    "name": "One-arm push-up",
+    "short_desc": "The hardest push-up progression",
+    "instructions": [
+     "Feet wide, free hand behind the back",
+     "Working hand under the centre of the chest",
+     "Lower under control, core braced",
+     "Press up with minimal rotation"
+    ],
+    "common_mistakes": [
+     "Torso rolling to the side",
+     "Stance too narrow",
+     "Half range of motion"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "dead-hang",
+  "category": "pull",
+  "force": "pull",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 0.8,
+  "level_min": 1,
+  "level_max": 3,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "forearms",
+   "lats"
+  ],
+  "secondary_muscles": [
+   "shoulders"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ჩამოკიდება",
+    "short_desc": "ხელის ჩაჭიდების ბაზისი",
+    "instructions": [
+     "დაიჭირე ტურნიკი მხრების სიგანეზე",
+     "მხრები აქტიურია, ყურებთან არ იწევა",
+     "ჩამოეკიდე კონტროლით",
+     "სუნთქე თანაბრად"
+    ],
+    "common_mistakes": [
+     "მხრები სრულად მოდუნებულია",
+     "სხეული ქანაობს",
+     "მაჯები არ არის გახურებული"
+    ]
+   },
+   "ru": {
+    "name": "Вис на перекладине",
+    "short_desc": "База хвата",
+    "instructions": [
+     "Возьмись за турник на ширине плеч",
+     "Плечи активны, не поднимаются к ушам",
+     "Виси под контролем",
+     "Дыши ровно"
+    ],
+    "common_mistakes": [
+     "Плечи полностью расслаблены",
+     "Тело раскачивается",
+     "Запястья не разогреты"
+    ]
+   },
+   "en": {
+    "name": "Dead hang",
+    "short_desc": "The foundation of grip strength",
+    "instructions": [
+     "Grip the bar shoulder-width",
+     "Shoulders active, not shrugged to the ears",
+     "Hang under control",
+     "Breathe evenly"
+    ],
+    "common_mistakes": [
+     "Shoulders fully relaxed",
+     "Body swinging",
+     "Wrists not warmed up"
+    ]
+   }
+  },
+  "progression_to": "australian-row"
+ },
+ {
+  "slug": "australian-row",
+  "category": "pull",
+  "force": "pull",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 1.2,
+  "level_min": 1,
+  "level_max": 3,
+  "equipment": [
+   "low_bar"
+  ],
+  "primary_muscles": [
+   "lats",
+   "biceps"
+  ],
+  "secondary_muscles": [
+   "rhomboids",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ავსტრალიური მოზიდვა",
+    "short_desc": "ჰორიზონტალური მოზიდვა დაბალ ტურნიკზე",
+    "instructions": [
+     "ჩაწექი დაბალი ტურნიკის ქვეშ, ხელები მხრების სიგანეზე",
+     "სხეული სწორია ქუსლიდან თავამდე",
+     "მიიზიდე გულმკერდი ტურნიკამდე",
+     "ჩადი კონტროლით, სრულ გაშლამდე"
+    ],
+    "common_mistakes": [
+     "მენჯი ჩამოვარდნილია",
+     "ტურნიკამდე ბოლომდე არ მიდის",
+     "მხრები ყურებთან იწევა"
+    ]
+   },
+   "ru": {
+    "name": "Австралийские подтягивания",
+    "short_desc": "Горизонтальная тяга на низком турнике",
+    "instructions": [
+     "Ляг под низкий турник, руки на ширине плеч",
+     "Тело прямое от пяток до головы",
+     "Подтяни грудь к турнику",
+     "Опускайся под контролем до полного выпрямления"
+    ],
+    "common_mistakes": [
+     "Таз провисает",
+     "Не доводишь до турника",
+     "Плечи поднимаются к ушам"
+    ]
+   },
+   "en": {
+    "name": "Australian row",
+    "short_desc": "Horizontal pull on a low bar",
+    "instructions": [
+     "Lie under a low bar, hands shoulder-width",
+     "Body straight from heels to head",
+     "Pull the chest to the bar",
+     "Lower under control to full extension"
+    ],
+    "common_mistakes": [
+     "Hips sagging",
+     "Not pulling all the way to the bar",
+     "Shoulders shrugging"
+    ]
+   }
+  },
+  "progression_to": "negative-pull-up"
+ },
+ {
+  "slug": "negative-pull-up",
+  "category": "pull",
+  "force": "pull",
+  "mechanic": "compound",
+  "unit": "seconds",
+  "difficulty_coef": 2.0,
+  "level_min": 2,
+  "level_max": 3,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "lats",
+   "biceps"
+  ],
+  "secondary_muscles": [
+   "forearms"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ნეგატიური მოზიდვა",
+    "short_desc": "მხოლოდ ჩამოსვლის ფაზა",
+    "instructions": [
+     "ახტი ან ავიდე საფეხურით ნიკაპი ტურნიკზე ზემოთ",
+     "ჩამოდი მაქსიმალურად ნელა — მიზანი 5 წამია",
+     "ჩამოდი სრულ გაშლამდე",
+     "გაიმეორე"
+    ],
+    "common_mistakes": [
+     "ჩამოვარდნა ნაცვლად კონტროლისა",
+     "მხრები არ არის ჩაშვებული",
+     "სრულ გაშლამდე არ მიდის"
+    ]
+   },
+   "ru": {
+    "name": "Негативные подтягивания",
+    "short_desc": "Только фаза опускания",
+    "instructions": [
+     "Запрыгни или встань на опору, подбородок над турником",
+     "Опускайся максимально медленно — цель 5 секунд",
+     "Опустись до полного выпрямления",
+     "Повтори"
+    ],
+    "common_mistakes": [
+     "Падение вместо контроля",
+     "Плечи не опущены",
+     "Не доходит до полного выпрямления"
+    ]
+   },
+   "en": {
+    "name": "Negative pull-up",
+    "short_desc": "The lowering phase only",
+    "instructions": [
+     "Jump or step up so the chin is over the bar",
+     "Lower as slowly as possible — aim for 5 seconds",
+     "Descend to full extension",
+     "Repeat"
+    ],
+    "common_mistakes": [
+     "Dropping instead of controlling",
+     "Shoulders not depressed",
+     "Not reaching full extension"
+    ]
+   }
+  },
+  "progression_to": "chin-up"
+ },
+ {
+  "slug": "chin-up",
+  "category": "pull",
+  "force": "pull",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 2.6,
+  "level_min": 3,
+  "level_max": 5,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "biceps",
+   "lats"
+  ],
+  "secondary_muscles": [
+   "forearms",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ჩინ-აპი",
+    "short_desc": "ქვედა ჩაჭიდება — მეტი ბიცეფსი",
+    "instructions": [
+     "დაიჭირე ტურნიკი ქვედა ჩაჭიდებით, მხრების სიგანეზე",
+     "მხრები ჩაუშვი ყურებიდან",
+     "მიიზიდე სანამ ნიკაპი ტურნიკს არ გადააჭარბებს",
+     "ჩადი სრულ გაშლამდე"
+    ],
+    "common_mistakes": [
+     "რხევა და აჩქარება",
+     "ნახევარი ამპლიტუდა",
+     "ნიკაპის „გაწევა“ სხეულის ნაცვლად"
+    ]
+   },
+   "ru": {
+    "name": "Подтягивания обратным хватом",
+    "short_desc": "Обратный хват — больше бицепса",
+    "instructions": [
+     "Возьмись обратным хватом на ширине плеч",
+     "Опусти плечи от ушей",
+     "Подтянись, пока подбородок не окажется выше турника",
+     "Опустись до полного выпрямления"
+    ],
+    "common_mistakes": [
+     "Раскачка и рывки",
+     "Половинная амплитуда",
+     "Тянешь подбородок вместо тела"
+    ]
+   },
+   "en": {
+    "name": "Chin-up",
+    "short_desc": "Underhand grip — more biceps",
+    "instructions": [
+     "Take an underhand grip, shoulder-width",
+     "Depress the shoulders away from the ears",
+     "Pull until the chin clears the bar",
+     "Lower to full extension"
+    ],
+    "common_mistakes": [
+     "Kipping and jerking",
+     "Half range of motion",
+     "Craning the chin instead of pulling the body"
+    ]
+   }
+  },
+  "progression_to": "pull-up"
+ },
+ {
+  "slug": "pull-up",
+  "category": "pull",
+  "force": "pull",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 3.0,
+  "level_min": 3,
+  "level_max": 5,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "lats",
+   "biceps"
+  ],
+  "secondary_muscles": [
+   "forearms",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": true,
+  "unlock_bonus_xp": 200,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "მოზიდვა",
+    "short_desc": "კალისთენიკის ბირთვი",
+    "instructions": [
+     "დაიჭირე ტურნიკი ზედა ჩაჭიდებით, მხრებზე ოდნავ განიერად",
+     "მხრები ჩაუშვი, კორპუსი დაჭიმე",
+     "მიიზიდე გულმკერდი ტურნიკისკენ",
+     "ჩადი კონტროლით სრულ გაშლამდე"
+    ],
+    "common_mistakes": [
+     "რხევა (kipping) სუფთა მოზიდვის ნაცვლად",
+     "ნახევარი ამპლიტუდა",
+     "მხრები ყურებთან იწევა",
+     "სუნთქვის შეკავება"
+    ]
+   },
+   "ru": {
+    "name": "Подтягивания",
+    "short_desc": "Ядро калистеники",
+    "instructions": [
+     "Возьмись прямым хватом чуть шире плеч",
+     "Опусти плечи, напряги корпус",
+     "Подтяни грудь к турнику",
+     "Опускайся под контролем до полного выпрямления"
+    ],
+    "common_mistakes": [
+     "Раскачка вместо чистого подтягивания",
+     "Половинная амплитуда",
+     "Плечи поднимаются к ушам",
+     "Задержка дыхания"
+    ]
+   },
+   "en": {
+    "name": "Pull-up",
+    "short_desc": "The core of calisthenics",
+    "instructions": [
+     "Overhand grip slightly wider than the shoulders",
+     "Depress the shoulders, brace the core",
+     "Pull the chest toward the bar",
+     "Lower under control to full extension"
+    ],
+    "common_mistakes": [
+     "Kipping instead of a strict pull",
+     "Half range of motion",
+     "Shoulders shrugging to the ears",
+     "Holding your breath"
+    ]
+   }
+  },
+  "progression_to": "wide-pull-up"
+ },
+ {
+  "slug": "wide-pull-up",
+  "category": "pull",
+  "force": "pull",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 3.4,
+  "level_min": 4,
+  "level_max": 5,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "lats"
+  ],
+  "secondary_muscles": [
+   "biceps",
+   "rhomboids"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "განიერი მოზიდვა",
+    "short_desc": "ფართო ჩაჭიდება — აქცენტი ზურგზე",
+    "instructions": [
+     "ჩაჭიდება მხრებზე მნიშვნელოვნად განიერად",
+     "მხრები ჩაუშვი, გულმკერდი წინ",
+     "მიიზიდე ზურგის ძალით, არა ბიცეფსით",
+     "ჩადი კონტროლით"
+    ],
+    "common_mistakes": [
+     "ძალიან განიერი ჩაჭიდება — მხრის ტრავმის რისკი",
+     "ნახევარი ამპლიტუდა",
+     "იდაყვები წინ მიდის"
+    ]
+   },
+   "ru": {
+    "name": "Широкие подтягивания",
+    "short_desc": "Широкий хват — акцент на спину",
+    "instructions": [
+     "Хват значительно шире плеч",
+     "Опусти плечи, грудь вперёд",
+     "Тяни спиной, а не бицепсом",
+     "Опускайся под контролем"
+    ],
+    "common_mistakes": [
+     "Слишком широкий хват — риск для плеча",
+     "Половинная амплитуда",
+     "Локти уходят вперёд"
+    ]
+   },
+   "en": {
+    "name": "Wide pull-up",
+    "short_desc": "Wide grip — back emphasis",
+    "instructions": [
+     "Grip significantly wider than the shoulders",
+     "Depress the shoulders, chest up",
+     "Pull with the back, not the biceps",
+     "Lower under control"
+    ],
+    "common_mistakes": [
+     "Grip so wide it stresses the shoulder",
+     "Half range of motion",
+     "Elbows drifting forward"
+    ]
+   }
+  },
+  "progression_to": "archer-pull-up"
+ },
+ {
+  "slug": "archer-pull-up",
+  "category": "pull",
+  "force": "pull",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 5.0,
+  "level_min": 5,
+  "level_max": 5,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "lats",
+   "biceps"
+  ],
+  "secondary_muscles": [
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "მშვილდოსნის მოზიდვა",
+    "short_desc": "ერთხელა მოზიდვის მოსამზადებელი",
+    "instructions": [
+     "ჩაჭიდება ძალიან განიერად",
+     "მიიზიდე ერთი მკლავისკენ, მეორე სწორდება",
+     "ნიკაპი ტურნიკს ზემოთ",
+     "ჩადი და გაიმეორე მეორე მხარეს"
+    ],
+    "common_mistakes": [
+     "სწორი მკლავი მუშაობს",
+     "სხეული ბრუნავს",
+     "მხარეები არათანაბრად ივარჯიშება"
+    ]
+   },
+   "ru": {
+    "name": "Подтягивания лучника",
+    "short_desc": "Подготовка к подтягиванию на одной руке",
+    "instructions": [
+     "Очень широкий хват",
+     "Подтянись к одной руке, вторая выпрямляется",
+     "Подбородок над турником",
+     "Опустись и повтори с другой стороны"
+    ],
+    "common_mistakes": [
+     "Прямая рука помогает",
+     "Корпус разворачивается",
+     "Стороны нагружаются неравномерно"
+    ]
+   },
+   "en": {
+    "name": "Archer pull-up",
+    "short_desc": "A step toward the one-arm pull-up",
+    "instructions": [
+     "Take a very wide grip",
+     "Pull toward one arm while the other straightens",
+     "Chin over the bar",
+     "Lower and repeat on the other side"
+    ],
+    "common_mistakes": [
+     "Straight arm helping",
+     "Torso rotating",
+     "Uneven work between sides"
+    ]
+   }
+  },
+  "progression_to": "muscle-up"
+ },
+ {
+  "slug": "muscle-up",
+  "category": "pull",
+  "force": "pull",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 8.0,
+  "level_min": 5,
+  "level_max": 5,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "lats",
+   "triceps",
+   "chest"
+  ],
+  "secondary_muscles": [
+   "core",
+   "forearms"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": true,
+  "unlock_bonus_xp": 500,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "მასლ-აპი",
+    "short_desc": "მოზიდვა + გადასვლა ტურნიკზე ზემოთ",
+    "instructions": [
+     "ცრუ ჩაჭიდება (false grip) ან ჩვეულებრივი",
+     "ასაფეთქებელი მოზიდვა გულმკერდის ქვედა ნაწილამდე",
+     "გადაატრიალე მაჯები და გადადი ტურნიკზე",
+     "გაასწორე ხელები ზემოთ"
+    ],
+    "common_mistakes": [
+     "ზედმეტი რხევა — მხრის ტრავმის მთავარი მიზეზი",
+     "გადასვლა ნახევარ სიმაღლეზე",
+     "მაჯების არასაკმარისი გახურება"
+    ]
+   },
+   "ru": {
+    "name": "Выход силой",
+    "short_desc": "Подтягивание + переход над турником",
+    "instructions": [
+     "Ложный хват (false grip) или обычный",
+     "Взрывное подтягивание до низа груди",
+     "Переверни кисти и перейди над турником",
+     "Выпрями руки вверху"
+    ],
+    "common_mistakes": [
+     "Избыточная раскачка — главная причина травм плеча",
+     "Переход на половине высоты",
+     "Недостаточная разминка запястий"
+    ]
+   },
+   "en": {
+    "name": "Muscle-up",
+    "short_desc": "A pull-up plus a transition over the bar",
+    "instructions": [
+     "False grip or standard grip",
+     "Explosive pull to the lower chest",
+     "Roll the wrists over and transition above the bar",
+     "Lock the arms out at the top"
+    ],
+    "common_mistakes": [
+     "Excessive kipping — the main cause of shoulder injuries",
+     "Attempting the transition too low",
+     "Wrists not warmed up"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "bench-dip",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 0.9,
+  "level_min": 1,
+  "level_max": 3,
+  "equipment": [
+   "bench"
+  ],
+  "primary_muscles": [
+   "triceps"
+  ],
+  "secondary_muscles": [
+   "shoulders",
+   "chest"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "სკამზე დიპი",
+    "short_desc": "ტრიცეფსის მარტივი ვარიანტი",
+    "instructions": [
+     "ხელები სკამზე ზურგს უკან, თითები წინ",
+     "ჩადი იდაყვების მოხრით 90°-მდე",
+     "მხრები ყურებიდან შორს",
+     "ამოდი ტრიცეფსით"
+    ],
+    "common_mistakes": [
+     "მხრები მაღლა იწევა",
+     "მენჯი სკამისგან შორსაა — მხრის დატვირთვა",
+     "ძალიან ღრმად ჩასვლა"
+    ]
+   },
+   "ru": {
+    "name": "Обратные отжимания от скамьи",
+    "short_desc": "Простой вариант на трицепс",
+    "instructions": [
+     "Руки на скамье за спиной, пальцы вперёд",
+     "Опускайся, сгибая локти до 90°",
+     "Плечи подальше от ушей",
+     "Выжимай трицепсом"
+    ],
+    "common_mistakes": [
+     "Плечи поднимаются",
+     "Таз далеко от скамьи — нагрузка на плечо",
+     "Слишком глубокий сед"
+    ]
+   },
+   "en": {
+    "name": "Bench dip",
+    "short_desc": "An easy triceps variation",
+    "instructions": [
+     "Hands on a bench behind you, fingers forward",
+     "Lower by bending the elbows to about 90°",
+     "Keep shoulders away from the ears",
+     "Press up with the triceps"
+    ],
+    "common_mistakes": [
+     "Shoulders shrugging up",
+     "Hips too far from the bench — shoulder strain",
+     "Going too deep"
+    ]
+   }
+  },
+  "progression_to": "dip"
+ },
+ {
+  "slug": "dip",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 2.0,
+  "level_min": 3,
+  "level_max": 5,
+  "equipment": [
+   "parallel_bars"
+  ],
+  "primary_muscles": [
+   "triceps",
+   "chest"
+  ],
+  "secondary_muscles": [
+   "shoulders",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": true,
+  "unlock_bonus_xp": 150,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "დიპი",
+    "short_desc": "ბრუსებზე ჩაწევა",
+    "instructions": [
+     "ავიდე ბრუსებზე, ხელები სწორი, მხრები ჩაშვებული",
+     "ჩადი სანამ მხარი პარალელურს არ მიაღწევს",
+     "გულმკერდი ოდნავ წინ დახრილი",
+     "ამოდი სრულ გასწორებამდე"
+    ],
+    "common_mistakes": [
+     "ძალიან ღრმად ჩასვლა — მხრის ტრავმა",
+     "მხრები ყურებთან",
+     "რხევა ფეხებით"
+    ]
+   },
+   "ru": {
+    "name": "Отжимания на брусьях",
+    "short_desc": "Классические брусья",
+    "instructions": [
+     "Выйди на брусья, руки прямые, плечи опущены",
+     "Опускайся, пока плечо не станет параллельно полу",
+     "Грудь слегка наклонена вперёд",
+     "Выжми до полного выпрямления"
+    ],
+    "common_mistakes": [
+     "Слишком глубокий сед — травма плеча",
+     "Плечи у ушей",
+     "Раскачка ногами"
+    ]
+   },
+   "en": {
+    "name": "Dip",
+    "short_desc": "The classic parallel-bar dip",
+    "instructions": [
+     "Support yourself on the bars, arms locked, shoulders down",
+     "Lower until the upper arm is parallel to the ground",
+     "Lean the chest slightly forward",
+     "Press to full lockout"
+    ],
+    "common_mistakes": [
+     "Going too deep — shoulder injury risk",
+     "Shoulders up by the ears",
+     "Swinging the legs"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "plank",
+  "category": "core",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 1.0,
+  "level_min": 1,
+  "level_max": 4,
+  "equipment": [],
+  "primary_muscles": [
+   "core"
+  ],
+  "secondary_muscles": [
+   "shoulders",
+   "glutes"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "პლანკი",
+    "short_desc": "სტატიკური კორპუსის დაჭიმვა",
+    "instructions": [
+     "იდაყვები მხრების ქვეშ, წინამხრები იატაკზე",
+     "სხეული ერთ ხაზზე ქუსლიდან თავამდე",
+     "დაჭიმე დუნდულები და მუცელი",
+     "სუნთქე თანაბრად"
+    ],
+    "common_mistakes": [
+     "მენჯი ჩამოვარდნილია — წელის დატვირთვა",
+     "მენჯი ზემოთაა აწეული",
+     "სუნთქვის შეკავება",
+     "თავი ჩამოშვებული"
+    ]
+   },
+   "ru": {
+    "name": "Планка",
+    "short_desc": "Статическое напряжение корпуса",
+    "instructions": [
+     "Локти под плечами, предплечья на полу",
+     "Тело в одну линию от пяток до головы",
+     "Напряги ягодицы и живот",
+     "Дыши ровно"
+    ],
+    "common_mistakes": [
+     "Таз провисает — нагрузка на поясницу",
+     "Таз задран",
+     "Задержка дыхания",
+     "Голова опущена"
+    ]
+   },
+   "en": {
+    "name": "Plank",
+    "short_desc": "A static core brace",
+    "instructions": [
+     "Elbows under the shoulders, forearms on the floor",
+     "Body in one line from heels to head",
+     "Squeeze glutes and brace the abs",
+     "Breathe evenly"
+    ],
+    "common_mistakes": [
+     "Hips sagging — lower-back strain",
+     "Hips piked up",
+     "Holding your breath",
+     "Head dropping"
+    ]
+   }
+  },
+  "progression_to": "hollow-body-hold"
+ },
+ {
+  "slug": "hollow-body-hold",
+  "category": "core",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 1.5,
+  "level_min": 2,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "core"
+  ],
+  "secondary_muscles": [
+   "hip_flexors"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ჰოლოუ ბოდი",
+    "short_desc": "ყველა სტატიკური სქილის საფუძველი",
+    "instructions": [
+     "დაწექი ზურგზე, წელი იატაკზე მიჭერილი",
+     "ასწიე ბეჭები და ფეხები იატაკიდან",
+     "ხელები ყურებთან ან წინ გაშლილი",
+     "შეინარჩუნე წელის კონტაქტი იატაკთან"
+    ],
+    "common_mistakes": [
+     "წელი იატაკს სცილდება — მთავარი შეცდომა",
+     "ფეხები ძალიან დაბლაა დამწყებისთვის",
+     "კისრის დაძაბვა"
+    ]
+   },
+   "ru": {
+    "name": "Hollow body",
+    "short_desc": "Основа всех статических элементов",
+    "instructions": [
+     "Ляг на спину, поясница прижата к полу",
+     "Оторви лопатки и ноги от пола",
+     "Руки у ушей или вытянуты вперёд",
+     "Сохраняй контакт поясницы с полом"
+    ],
+    "common_mistakes": [
+     "Поясница отрывается — главная ошибка",
+     "Ноги слишком низко для новичка",
+     "Напряжение в шее"
+    ]
+   },
+   "en": {
+    "name": "Hollow body hold",
+    "short_desc": "The foundation of every static skill",
+    "instructions": [
+     "Lie on your back, lower back pressed into the floor",
+     "Lift shoulder blades and legs off the ground",
+     "Arms by the ears or reaching forward",
+     "Keep the lower back glued down"
+    ],
+    "common_mistakes": [
+     "Lower back lifting off — the key mistake",
+     "Legs too low for a beginner",
+     "Straining the neck"
+    ]
+   }
+  },
+  "progression_to": "l-sit"
+ },
+ {
+  "slug": "l-sit",
+  "category": "core",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 2.5,
+  "level_min": 3,
+  "level_max": 5,
+  "equipment": [
+   "parallel_bars"
+  ],
+  "primary_muscles": [
+   "core",
+   "hip_flexors"
+  ],
+  "secondary_muscles": [
+   "triceps",
+   "shoulders"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "L-სიტი",
+    "short_desc": "ფეხები 90°-ზე, სხეული ხელებზე",
+    "instructions": [
+     "დაეყრდენი ბრუსებს ან იატაკს, ხელები სწორი",
+     "მხრები ჩაშვებული, გულმკერდი წინ",
+     "ასწიე ფეხები 90°-მდე, მუხლები სწორი",
+     "დაიჭირე პოზიცია"
+    ],
+    "common_mistakes": [
+     "მხრები ყურებთან იწევა",
+     "მუხლები იღუნება",
+     "ზურგი მრგვალდება"
+    ]
+   },
+   "ru": {
+    "name": "Уголок (L-sit)",
+    "short_desc": "Ноги под 90°, тело на руках",
+    "instructions": [
+     "Обопрись о брусья или пол, руки прямые",
+     "Плечи опущены, грудь вперёд",
+     "Подними ноги до 90°, колени прямые",
+     "Удерживай позицию"
+    ],
+    "common_mistakes": [
+     "Плечи поднимаются к ушам",
+     "Колени сгибаются",
+     "Спина круглится"
+    ]
+   },
+   "en": {
+    "name": "L-sit",
+    "short_desc": "Legs at 90°, body supported on the arms",
+    "instructions": [
+     "Support on parallel bars or the floor, arms locked",
+     "Shoulders depressed, chest open",
+     "Lift the legs to 90°, knees straight",
+     "Hold the position"
+    ],
+    "common_mistakes": [
+     "Shoulders shrugging",
+     "Knees bending",
+     "Back rounding"
+    ]
+   }
+  },
+  "progression_to": "tuck-planche"
+ },
+ {
+  "slug": "handstand-hold",
+  "category": "static",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 3.0,
+  "level_min": 4,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "shoulders",
+   "core"
+  ],
+  "secondary_muscles": [
+   "triceps",
+   "forearms"
+  ],
+  "skill_group": "handstand",
+  "is_skill_unlock": true,
+  "unlock_bonus_xp": 400,
+  "unlock_threshold": 10,
+  "translations": {
+   "ka": {
+    "name": "სტოიკა",
+    "short_desc": "ხელებზე დგომა",
+    "instructions": [
+     "ხელები მხრების სიგანეზე, თითები გაშლილი",
+     "ასწიე ფეხები კედლისკენ ან თავისუფლად",
+     "სხეული ერთ ხაზზე, დუნდულები დაჭიმული",
+     "ბალანსი თითებით რეგულირდება"
+    ],
+    "common_mistakes": [
+     "ბანანის ფორმა — წელი გადაღუნული",
+     "მხრები სრულად არ არის გახსნილი",
+     "მაჯების გახურების გამოტოვება"
+    ]
+   },
+   "ru": {
+    "name": "Стойка на руках",
+    "short_desc": "Удержание на руках",
+    "instructions": [
+     "Руки на ширине плеч, пальцы разведены",
+     "Подними ноги к стене или свободно",
+     "Тело в одну линию, ягодицы напряжены",
+     "Баланс регулируется пальцами"
+    ],
+    "common_mistakes": [
+     "«Банан» — прогиб в пояснице",
+     "Плечи не раскрыты полностью",
+     "Пропущенная разминка запястий"
+    ]
+   },
+   "en": {
+    "name": "Handstand hold",
+    "short_desc": "Balancing on the hands",
+    "instructions": [
+     "Hands shoulder-width, fingers spread",
+     "Kick up to a wall or free-standing",
+     "Body in one line, glutes squeezed",
+     "Balance with the fingertips"
+    ],
+    "common_mistakes": [
+     "Banana shape — arching the lower back",
+     "Shoulders not fully open",
+     "Skipping wrist warm-up"
+    ]
+   }
+  },
+  "progression_to": "handstand-push-up"
+ },
+ {
+  "slug": "handstand-push-up",
+  "category": "push",
+  "force": "push",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 7.0,
+  "level_min": 5,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "shoulders",
+   "triceps"
+  ],
+  "secondary_muscles": [
+   "core"
+  ],
+  "skill_group": "handstand",
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "სტოიკაში აჭიმი",
+    "short_desc": "ვერტიკალური წნევა",
+    "instructions": [
+     "ჩადექი სტოიკაში კედელთან",
+     "ჩადი სანამ თავი იატაკს არ მიუახლოვდება",
+     "იდაყვები წინ, არა გვერდებზე",
+     "ამოდი სრულ გასწორებამდე"
+    ],
+    "common_mistakes": [
+     "კისრით დაყრდნობა",
+     "იდაყვები გვერდებზე იშლება",
+     "ნახევარი ამპლიტუდა"
+    ]
+   },
+   "ru": {
+    "name": "Отжимания в стойке",
+    "short_desc": "Вертикальный жим",
+    "instructions": [
+     "Встань в стойку у стены",
+     "Опускайся, пока голова не приблизится к полу",
+     "Локти вперёд, не в стороны",
+     "Выжми до полного выпрямления"
+    ],
+    "common_mistakes": [
+     "Опора на шею",
+     "Локти разводятся",
+     "Половинная амплитуда"
+    ]
+   },
+   "en": {
+    "name": "Handstand push-up",
+    "short_desc": "A vertical press",
+    "instructions": [
+     "Kick into a handstand against a wall",
+     "Lower until the head is close to the floor",
+     "Elbows forward, not flared",
+     "Press to full lockout"
+    ],
+    "common_mistakes": [
+     "Resting weight on the neck",
+     "Elbows flaring out",
+     "Half range of motion"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "tuck-front-lever",
+  "category": "pull",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 3.5,
+  "level_min": 4,
+  "level_max": 5,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "lats",
+   "core"
+  ],
+  "secondary_muscles": [
+   "shoulders"
+  ],
+  "skill_group": "front_lever",
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ტაკ ფრონტ ლევერი",
+    "short_desc": "ფრონტ ლევერის პირველი საფეხური",
+    "instructions": [
+     "ჩამოეკიდე ტურნიკზე, მხრები ჩაშვებული",
+     "მიიზიდე მუხლები გულმკერდთან",
+     "გადაატრიალე სხეული ჰორიზონტალურად",
+     "ზურგი პარალელურია მიწასთან"
+    ],
+    "common_mistakes": [
+     "მენჯი დაბლაა",
+     "მხრები არ არის ჩაშვებული",
+     "ზურგი მრგვალდება"
+    ]
+   },
+   "ru": {
+    "name": "Front lever в группировке",
+    "short_desc": "Первый этап front lever",
+    "instructions": [
+     "Повисни на турнике, плечи опущены",
+     "Подтяни колени к груди",
+     "Разверни корпус горизонтально",
+     "Спина параллельна земле"
+    ],
+    "common_mistakes": [
+     "Таз опущен",
+     "Плечи не опущены",
+     "Спина круглится"
+    ]
+   },
+   "en": {
+    "name": "Tuck front lever",
+    "short_desc": "The first front lever progression",
+    "instructions": [
+     "Hang from the bar with depressed shoulders",
+     "Pull the knees to the chest",
+     "Rotate the body to horizontal",
+     "Back parallel to the ground"
+    ],
+    "common_mistakes": [
+     "Hips hanging low",
+     "Shoulders not depressed",
+     "Back rounding"
+    ]
+   }
+  },
+  "progression_to": "front-lever"
+ },
+ {
+  "slug": "front-lever",
+  "category": "pull",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 6.0,
+  "level_min": 5,
+  "level_max": 5,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "lats",
+   "core"
+  ],
+  "secondary_muscles": [
+   "shoulders",
+   "glutes"
+  ],
+  "skill_group": "front_lever",
+  "is_skill_unlock": true,
+  "unlock_bonus_xp": 800,
+  "unlock_threshold": 5,
+  "translations": {
+   "ka": {
+    "name": "ფრონტ ლევერი",
+    "short_desc": "სხეული ჰორიზონტალურად, ფეხები სწორი",
+    "instructions": [
+     "ჩამოეკიდე, მხრები ჩაშვებული და აქტიური",
+     "დაჭიმე ზურგი და დუნდულები",
+     "ასწიე სხეული ჰორიზონტალურ პოზიციამდე",
+     "ფეხები სრულად სწორი"
+    ],
+    "common_mistakes": [
+     "მენჯი ჩამოვარდნილი",
+     "მუხლები ოდნავ მოხრილი",
+     "სუნთქვის შეკავება"
+    ]
+   },
+   "ru": {
+    "name": "Front lever",
+    "short_desc": "Тело горизонтально, ноги прямые",
+    "instructions": [
+     "Повисни, плечи опущены и активны",
+     "Напряги спину и ягодицы",
+     "Подними тело в горизонталь",
+     "Ноги полностью прямые"
+    ],
+    "common_mistakes": [
+     "Таз провисает",
+     "Колени слегка согнуты",
+     "Задержка дыхания"
+    ]
+   },
+   "en": {
+    "name": "Front lever",
+    "short_desc": "Body horizontal, legs straight",
+    "instructions": [
+     "Hang with shoulders depressed and active",
+     "Brace the back and glutes",
+     "Raise the body to horizontal",
+     "Legs completely straight"
+    ],
+    "common_mistakes": [
+     "Hips sagging",
+     "Knees slightly bent",
+     "Holding your breath"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "back-lever",
+  "category": "pull",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 5.0,
+  "level_min": 5,
+  "level_max": 5,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "lats",
+   "chest"
+  ],
+  "secondary_muscles": [
+   "biceps",
+   "core"
+  ],
+  "skill_group": "back_lever",
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ბექ ლევერი",
+    "short_desc": "სახით ქვემოთ, ჰორიზონტალურად",
+    "instructions": [
+     "ჩამოეკიდე და გადაატრიალე სხეული უკან",
+     "ჩამოდი ჰორიზონტალურ პოზიციამდე სახით ქვემოთ",
+     "ხელები სწორი, გულმკერდი გახსნილი",
+     "დაჭიმე კორპუსი"
+    ],
+    "common_mistakes": [
+     "ბიცეფსის სრული გაშლა გახურების გარეშე — ტრავმის რისკი",
+     "მენჯი ჩამოვარდნილი",
+     "სწრაფი ჩამოსვლა"
+    ]
+   },
+   "ru": {
+    "name": "Back lever",
+    "short_desc": "Лицом вниз, горизонтально",
+    "instructions": [
+     "Повисни и провернись назад",
+     "Опустись в горизонталь лицом вниз",
+     "Руки прямые, грудь раскрыта",
+     "Напряги корпус"
+    ],
+    "common_mistakes": [
+     "Полное выпрямление бицепса без разминки — риск травмы",
+     "Таз провисает",
+     "Быстрый спуск"
+    ]
+   },
+   "en": {
+    "name": "Back lever",
+    "short_desc": "Face down, held horizontal",
+    "instructions": [
+     "Hang and rotate backwards through",
+     "Lower to horizontal, facing down",
+     "Arms straight, chest open",
+     "Brace the core"
+    ],
+    "common_mistakes": [
+     "Full biceps extension without warm-up — injury risk",
+     "Hips sagging",
+     "Dropping into position too fast"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "tuck-planche",
+  "category": "static",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 6.0,
+  "level_min": 5,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "shoulders",
+   "core"
+  ],
+  "secondary_muscles": [
+   "chest",
+   "triceps"
+  ],
+  "skill_group": "planche",
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ტაკ პლანში",
+    "short_desc": "პლანშის პირველი საფეხური",
+    "instructions": [
+     "ხელები იატაკზე, მხრები ხელებზე წინ",
+     "ასწიე ფეხები, მუხლები გულმკერდთან",
+     "ბალანსი მხოლოდ ხელებზეა",
+     "ზურგი მრგვალდება — ეს ნორმაა ამ საფეხურზე"
+    ],
+    "common_mistakes": [
+     "მუხლები დაბლაა",
+     "მხრები ხელებზე უკან",
+     "მაჯების არასაკმარისი მომზადება"
+    ]
+   },
+   "ru": {
+    "name": "Планш в группировке",
+    "short_desc": "Первый этап planche",
+    "instructions": [
+     "Руки на полу, плечи впереди кистей",
+     "Подними ноги, колени к груди",
+     "Баланс только на руках",
+     "Спина круглая — это нормально на этом этапе"
+    ],
+    "common_mistakes": [
+     "Колени опущены",
+     "Плечи позади кистей",
+     "Недостаточная подготовка запястий"
+    ]
+   },
+   "en": {
+    "name": "Tuck planche",
+    "short_desc": "The first planche progression",
+    "instructions": [
+     "Hands on the floor, shoulders ahead of the hands",
+     "Lift the feet, knees toward the chest",
+     "Balance entirely on the hands",
+     "Rounded back is correct at this stage"
+    ],
+    "common_mistakes": [
+     "Knees hanging low",
+     "Shoulders behind the hands",
+     "Wrists not conditioned"
+    ]
+   }
+  },
+  "progression_to": "planche"
+ },
+ {
+  "slug": "planche",
+  "category": "static",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 10.0,
+  "level_min": 5,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "shoulders",
+   "core"
+  ],
+  "secondary_muscles": [
+   "chest",
+   "triceps"
+  ],
+  "skill_group": "planche",
+  "is_skill_unlock": true,
+  "unlock_bonus_xp": 1500,
+  "unlock_threshold": 3,
+  "translations": {
+   "ka": {
+    "name": "პლანში",
+    "short_desc": "სხეული ჰორიზონტალურად ხელებზე",
+    "instructions": [
+     "ხელები იატაკზე, თითები გვერდზე ან უკან",
+     "გადაიხარე მაქსიმალურად წინ",
+     "ასწიე სხეული სრულ ჰორიზონტალამდე",
+     "ფეხები სწორი, დუნდულები დაჭიმული"
+    ],
+    "common_mistakes": [
+     "საკმარისი მოსამზადებელი მუშაობის გარეშე ცდა — მაჯისა და იდაყვის ტრავმა",
+     "მენჯი ზემოთაა",
+     "ნაკლები წინ გადახრა"
+    ]
+   },
+   "ru": {
+    "name": "Планш",
+    "short_desc": "Тело горизонтально на прямых руках",
+    "instructions": [
+     "Руки на полу, пальцы в стороны или назад",
+     "Наклонись максимально вперёд",
+     "Подними тело в полную горизонталь",
+     "Ноги прямые, ягодицы напряжены"
+    ],
+    "common_mistakes": [
+     "Попытка без подготовки — травма запястья и локтя",
+     "Таз задран",
+     "Недостаточный наклон вперёд"
+    ]
+   },
+   "en": {
+    "name": "Planche",
+    "short_desc": "Body held horizontal on straight arms",
+    "instructions": [
+     "Hands on the floor, fingers out or back",
+     "Lean as far forward as possible",
+     "Raise the body to full horizontal",
+     "Legs straight, glutes squeezed"
+    ],
+    "common_mistakes": [
+     "Attempting it without preparation — wrist and elbow injuries",
+     "Hips piked up",
+     "Not leaning far enough forward"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "squat",
+  "category": "legs",
+  "force": "legs",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 0.8,
+  "level_min": 1,
+  "level_max": 4,
+  "equipment": [],
+  "primary_muscles": [
+   "quads",
+   "glutes"
+  ],
+  "secondary_muscles": [
+   "core",
+   "hamstrings"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ჩაჯდომა",
+    "short_desc": "ფეხების ბაზისი",
+    "instructions": [
+     "ფეხები მხრების სიგანეზე, თითები ოდნავ გვერდზე",
+     "ჩადი მენჯის უკან წაწევით",
+     "ბარძაყი პარალელურამდე ან უფრო დაბლა",
+     "ამოდი ქუსლებზე დაყრდნობით"
+    ],
+    "common_mistakes": [
+     "მუხლები შიგნით ეცემა",
+     "ქუსლები იატაკს სცილდება",
+     "ზურგი მრგვალდება",
+     "ნახევარი ამპლიტუდა"
+    ]
+   },
+   "ru": {
+    "name": "Приседания",
+    "short_desc": "База для ног",
+    "instructions": [
+     "Ноги на ширине плеч, носки слегка в стороны",
+     "Опускайся, отводя таз назад",
+     "Бедро до параллели или ниже",
+     "Вставай через пятки"
+    ],
+    "common_mistakes": [
+     "Колени заваливаются внутрь",
+     "Пятки отрываются",
+     "Спина круглится",
+     "Половинная амплитуда"
+    ]
+   },
+   "en": {
+    "name": "Squat",
+    "short_desc": "The foundation for the legs",
+    "instructions": [
+     "Feet shoulder-width, toes slightly out",
+     "Descend by pushing the hips back",
+     "Thigh to parallel or below",
+     "Drive up through the heels"
+    ],
+    "common_mistakes": [
+     "Knees caving inward",
+     "Heels lifting off the floor",
+     "Back rounding",
+     "Half range of motion"
+    ]
+   }
+  },
+  "progression_to": "lunge"
+ },
+ {
+  "slug": "lunge",
+  "category": "legs",
+  "force": "legs",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 1.0,
+  "level_min": 1,
+  "level_max": 4,
+  "equipment": [],
+  "primary_muscles": [
+   "quads",
+   "glutes"
+  ],
+  "secondary_muscles": [
+   "hamstrings",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "გამოსვლა",
+    "short_desc": "ცალფეხა დატვირთვა",
+    "instructions": [
+     "გადადგი ნაბიჯი წინ",
+     "ჩადი სანამ უკანა მუხლი იატაკს არ მიუახლოვდება",
+     "წინა მუხლი ტერფს არ სცილდება",
+     "ამოდი წინა ფეხის ძალით"
+    ],
+    "common_mistakes": [
+     "წინა მუხლი ძალიან წინ მიდის",
+     "ბალანსის დაკარგვა",
+     "ნაბიჯი ძალიან მოკლეა"
+    ]
+   },
+   "ru": {
+    "name": "Выпады",
+    "short_desc": "Односторонняя нагрузка",
+    "instructions": [
+     "Сделай шаг вперёд",
+     "Опускайся, пока заднее колено не приблизится к полу",
+     "Переднее колено не выходит за стопу",
+     "Вставай усилием передней ноги"
+    ],
+    "common_mistakes": [
+     "Переднее колено уходит далеко вперёд",
+     "Потеря баланса",
+     "Слишком короткий шаг"
+    ]
+   },
+   "en": {
+    "name": "Lunge",
+    "short_desc": "Single-leg loading",
+    "instructions": [
+     "Step forward",
+     "Lower until the back knee is close to the floor",
+     "Front knee stays over the foot",
+     "Drive up with the front leg"
+    ],
+    "common_mistakes": [
+     "Front knee travelling too far forward",
+     "Losing balance",
+     "Step too short"
+    ]
+   }
+  },
+  "progression_to": "bulgarian-split-squat"
+ },
+ {
+  "slug": "bulgarian-split-squat",
+  "category": "legs",
+  "force": "legs",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 1.8,
+  "level_min": 3,
+  "level_max": 5,
+  "equipment": [
+   "bench"
+  ],
+  "primary_muscles": [
+   "quads",
+   "glutes"
+  ],
+  "secondary_muscles": [
+   "hamstrings",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ბულგარული ჩაჯდომა",
+    "short_desc": "უკანა ფეხი ამაღლებულია",
+    "instructions": [
+     "დადე უკანა ფეხი სკამზე",
+     "ჩადი წინა ფეხზე ვერტიკალურად",
+     "ბარძაყი პარალელურამდე",
+     "ამოდი წინა ფეხის ძალით"
+    ],
+    "common_mistakes": [
+     "ძალიან წინ ან უკან დგომა",
+     "მუხლი შიგნით ეცემა",
+     "კორპუსი ძლიერ იხრება"
+    ]
+   },
+   "ru": {
+    "name": "Болгарские приседания",
+    "short_desc": "Задняя нога на возвышении",
+    "instructions": [
+     "Поставь заднюю ногу на скамью",
+     "Опускайся вертикально на переднюю ногу",
+     "Бедро до параллели",
+     "Вставай усилием передней ноги"
+    ],
+    "common_mistakes": [
+     "Стоишь слишком близко или далеко",
+     "Колено заваливается внутрь",
+     "Сильный наклон корпуса"
+    ]
+   },
+   "en": {
+    "name": "Bulgarian split squat",
+    "short_desc": "Rear foot elevated",
+    "instructions": [
+     "Place the rear foot on a bench",
+     "Descend vertically over the front leg",
+     "Thigh to parallel",
+     "Drive up with the front leg"
+    ],
+    "common_mistakes": [
+     "Standing too close or too far",
+     "Knee caving inward",
+     "Excessive forward lean"
+    ]
+   }
+  },
+  "progression_to": "pistol-squat"
+ },
+ {
+  "slug": "pistol-squat",
+  "category": "legs",
+  "force": "legs",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 3.0,
+  "level_min": 4,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "quads",
+   "glutes"
+  ],
+  "secondary_muscles": [
+   "core",
+   "hamstrings"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": true,
+  "unlock_bonus_xp": 250,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "პისტოლეტი",
+    "short_desc": "ცალფეხა სრული ჩაჯდომა",
+    "instructions": [
+     "ასწიე ერთი ფეხი წინ",
+     "ჩადი კონტროლით ბოლომდე",
+     "ქუსლი იატაკზე რჩება",
+     "ამოდი ბრუნვის გარეშე"
+    ],
+    "common_mistakes": [
+     "ქუსლი სცილდება იატაკს — მობილობა აკლია",
+     "მუხლი შიგნით ეცემა",
+     "ჩამოვარდნა კონტროლის გარეშე"
+    ]
+   },
+   "ru": {
+    "name": "Пистолетик",
+    "short_desc": "Полное приседание на одной ноге",
+    "instructions": [
+     "Подними одну ногу вперёд",
+     "Опускайся под контролем до низа",
+     "Пятка остаётся на полу",
+     "Вставай без разворота"
+    ],
+    "common_mistakes": [
+     "Пятка отрывается — не хватает мобильности",
+     "Колено заваливается внутрь",
+     "Падение без контроля"
+    ]
+   },
+   "en": {
+    "name": "Pistol squat",
+    "short_desc": "A full single-leg squat",
+    "instructions": [
+     "Extend one leg forward",
+     "Lower under control to the bottom",
+     "Keep the heel planted",
+     "Stand up without twisting"
+    ],
+    "common_mistakes": [
+     "Heel lifting — mobility is the limiter",
+     "Knee caving inward",
+     "Dropping without control"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "glute-bridge",
+  "category": "legs",
+  "force": "legs",
+  "mechanic": "isolation",
+  "unit": "reps",
+  "difficulty_coef": 0.5,
+  "level_min": 1,
+  "level_max": 3,
+  "equipment": [],
+  "primary_muscles": [
+   "glutes"
+  ],
+  "secondary_muscles": [
+   "hamstrings",
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "მენჯის აწევა",
+    "short_desc": "დუნდულების იზოლაცია",
+    "instructions": [
+     "დაწექი ზურგზე, ფეხები მოხრილი",
+     "ასწიე მენჯი დუნდულების დაჭიმვით",
+     "მუხლი-მენჯი-მხარი ერთ ხაზზე",
+     "ჩადი კონტროლით"
+    ],
+    "common_mistakes": [
+     "წელით აწევა დუნდულების ნაცვლად",
+     "ზედმეტი გადაღუნვა ზემოთ",
+     "ნახევარი ამპლიტუდა"
+    ]
+   },
+   "ru": {
+    "name": "Ягодичный мостик",
+    "short_desc": "Изоляция ягодиц",
+    "instructions": [
+     "Ляг на спину, ноги согнуты",
+     "Подними таз, сжимая ягодицы",
+     "Колено-таз-плечо в одну линию",
+     "Опускайся под контролем"
+    ],
+    "common_mistakes": [
+     "Подъём поясницей вместо ягодиц",
+     "Переразгибание вверху",
+     "Половинная амплитуда"
+    ]
+   },
+   "en": {
+    "name": "Glute bridge",
+    "short_desc": "Glute isolation",
+    "instructions": [
+     "Lie on your back, knees bent",
+     "Lift the hips by squeezing the glutes",
+     "Knee-hip-shoulder in one line",
+     "Lower under control"
+    ],
+    "common_mistakes": [
+     "Lifting with the lower back instead of the glutes",
+     "Over-extending at the top",
+     "Half range of motion"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "calf-raise",
+  "category": "legs",
+  "force": "legs",
+  "mechanic": "isolation",
+  "unit": "reps",
+  "difficulty_coef": 0.4,
+  "level_min": 1,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "calves"
+  ],
+  "secondary_muscles": [],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ფეხის წვერებზე აწევა",
+    "short_desc": "წვივის კუნთი",
+    "instructions": [
+     "დადექი საფეხურის კიდეზე",
+     "ჩაუშვი ქუსლები ქვემოთ",
+     "ასწიე მაქსიმალურად მაღლა",
+     "დაიჭირე ერთი წამი ზემოთ"
+    ],
+    "common_mistakes": [
+     "რხევა იმპულსით",
+     "ნახევარი ამპლიტუდა",
+     "ძალიან სწრაფი ტემპი"
+    ]
+   },
+   "ru": {
+    "name": "Подъёмы на носки",
+    "short_desc": "Икроножные мышцы",
+    "instructions": [
+     "Встань на край ступени",
+     "Опусти пятки вниз",
+     "Поднимись максимально высоко",
+     "Задержись на секунду вверху"
+    ],
+    "common_mistakes": [
+     "Раскачка по инерции",
+     "Половинная амплитуда",
+     "Слишком быстрый темп"
+    ]
+   },
+   "en": {
+    "name": "Calf raise",
+    "short_desc": "Calf work",
+    "instructions": [
+     "Stand on the edge of a step",
+     "Let the heels drop below",
+     "Rise as high as possible",
+     "Pause a second at the top"
+    ],
+    "common_mistakes": [
+     "Bouncing with momentum",
+     "Half range of motion",
+     "Rushing the tempo"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "hanging-knee-raise",
+  "category": "core",
+  "force": "core",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 1.4,
+  "level_min": 2,
+  "level_max": 4,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "core",
+   "hip_flexors"
+  ],
+  "secondary_muscles": [
+   "forearms"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "მუხლების აწევა ჩამოკიდებით",
+    "short_desc": "ქვედა პრესი",
+    "instructions": [
+     "ჩამოეკიდე ტურნიკზე, მხრები აქტიური",
+     "ასწიე მუხლები გულმკერდისკენ",
+     "მენჯი ოდნავ იხვევა ზემოთ",
+     "ჩამოუშვი კონტროლით"
+    ],
+    "common_mistakes": [
+     "რხევა იმპულსით",
+     "მხოლოდ თეძოს მოხრა მენჯის ჩახვევის გარეშე",
+     "სწრაფი ჩამოშვება"
+    ]
+   },
+   "ru": {
+    "name": "Подъём коленей в висе",
+    "short_desc": "Нижний пресс",
+    "instructions": [
+     "Повисни на турнике, плечи активны",
+     "Подними колени к груди",
+     "Таз слегка подкручивается вверх",
+     "Опускай под контролем"
+    ],
+    "common_mistakes": [
+     "Раскачка по инерции",
+     "Только сгибание бедра без подкрутки таза",
+     "Быстрое опускание"
+    ]
+   },
+   "en": {
+    "name": "Hanging knee raise",
+    "short_desc": "Lower abs",
+    "instructions": [
+     "Hang from the bar with active shoulders",
+     "Raise the knees toward the chest",
+     "Let the pelvis curl slightly up",
+     "Lower under control"
+    ],
+    "common_mistakes": [
+     "Swinging with momentum",
+     "Only hip flexion, no pelvic curl",
+     "Dropping the legs"
+    ]
+   }
+  },
+  "progression_to": "hanging-leg-raise"
+ },
+ {
+  "slug": "hanging-leg-raise",
+  "category": "core",
+  "force": "core",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 2.4,
+  "level_min": 3,
+  "level_max": 5,
+  "equipment": [
+   "pull_up_bar"
+  ],
+  "primary_muscles": [
+   "core",
+   "hip_flexors"
+  ],
+  "secondary_muscles": [
+   "forearms",
+   "lats"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "სწორი ფეხების აწევა",
+    "short_desc": "ქვედა პრესის რთული ვარიანტი",
+    "instructions": [
+     "ჩამოეკიდე, ფეხები სწორი",
+     "ასწიე ფეხები ტურნიკამდე ან 90°-მდე",
+     "მუხლები არ იღუნება",
+     "ჩამოუშვი ნელა"
+    ],
+    "common_mistakes": [
+     "მუხლების მოხრა",
+     "რხევა",
+     "წელის გადაღუნვა"
+    ]
+   },
+   "ru": {
+    "name": "Подъём прямых ног",
+    "short_desc": "Сложный вариант нижнего пресса",
+    "instructions": [
+     "Повисни, ноги прямые",
+     "Подними ноги к турнику или до 90°",
+     "Колени не сгибаются",
+     "Опускай медленно"
+    ],
+    "common_mistakes": [
+     "Сгибание колен",
+     "Раскачка",
+     "Прогиб в пояснице"
+    ]
+   },
+   "en": {
+    "name": "Hanging leg raise",
+    "short_desc": "A harder lower-ab movement",
+    "instructions": [
+     "Hang with straight legs",
+     "Raise the legs to the bar or to 90°",
+     "Do not bend the knees",
+     "Lower slowly"
+    ],
+    "common_mistakes": [
+     "Bending the knees",
+     "Swinging",
+     "Arching the lower back"
+    ]
+   }
+  },
+  "progression_to": "dragon-flag"
+ },
+ {
+  "slug": "side-plank",
+  "category": "core",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 1.2,
+  "level_min": 1,
+  "level_max": 4,
+  "equipment": [],
+  "primary_muscles": [
+   "obliques",
+   "core"
+  ],
+  "secondary_muscles": [
+   "shoulders"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "გვერდითი პლანკი",
+    "short_desc": "ირიბი კუნთები",
+    "instructions": [
+     "დაწექი გვერდზე, იდაყვი მხრის ქვეშ",
+     "ასწიე მენჯი — სხეული სწორ ხაზზე",
+     "მხრები ერთმანეთზე ვერტიკალურად",
+     "დაიჭირე და გაიმეორე მეორე მხარეს"
+    ],
+    "common_mistakes": [
+     "მენჯი ჩამოვარდნილია",
+     "სხეული წინ ან უკან ეხრება",
+     "კისრის დაძაბვა"
+    ]
+   },
+   "ru": {
+    "name": "Боковая планка",
+    "short_desc": "Косые мышцы",
+    "instructions": [
+     "Ляг на бок, локоть под плечом",
+     "Подними таз — тело в прямую линию",
+     "Плечи строго друг над другом",
+     "Удерживай и повтори с другой стороны"
+    ],
+    "common_mistakes": [
+     "Таз провисает",
+     "Корпус заваливается вперёд или назад",
+     "Напряжение в шее"
+    ]
+   },
+   "en": {
+    "name": "Side plank",
+    "short_desc": "Obliques",
+    "instructions": [
+     "Lie on your side, elbow under the shoulder",
+     "Lift the hips — body in a straight line",
+     "Shoulders stacked vertically",
+     "Hold, then repeat on the other side"
+    ],
+    "common_mistakes": [
+     "Hips sagging",
+     "Torso rotating forward or back",
+     "Straining the neck"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "dragon-flag",
+  "category": "core",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 4.5,
+  "level_min": 5,
+  "level_max": 5,
+  "equipment": [
+   "bench"
+  ],
+  "primary_muscles": [
+   "core"
+  ],
+  "secondary_muscles": [
+   "lats",
+   "glutes"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "დრაკონის დროშა",
+    "short_desc": "კორპუსის უმაღლესი დონე",
+    "instructions": [
+     "დაწექი სკამზე, დაიჭირე თავს უკან",
+     "ასწიე სხეული ბეჭებზე დაყრდნობით",
+     "სხეული სწორია ქუსლიდან მხრამდე",
+     "ჩამოდი მაქსიმალურად ნელა"
+    ],
+    "common_mistakes": [
+     "წელით მუშაობა კორპუსის ნაცვლად",
+     "მუხლების მოხრა",
+     "სწრაფი ჩამოსვლა — წელის ტრავმის რისკი"
+    ]
+   },
+   "ru": {
+    "name": "Флаг дракона",
+    "short_desc": "Высший уровень для корпуса",
+    "instructions": [
+     "Ляг на скамью, схватись за неё за головой",
+     "Подними тело с опорой на лопатки",
+     "Тело прямое от пяток до плеч",
+     "Опускайся максимально медленно"
+    ],
+    "common_mistakes": [
+     "Работа поясницей вместо корпуса",
+     "Сгибание колен",
+     "Быстрый спуск — риск для поясницы"
+    ]
+   },
+   "en": {
+    "name": "Dragon flag",
+    "short_desc": "The top tier of core work",
+    "instructions": [
+     "Lie on a bench, grip it behind your head",
+     "Lift the body, supported on the shoulder blades",
+     "Body straight from heels to shoulders",
+     "Lower as slowly as possible"
+    ],
+    "common_mistakes": [
+     "Working with the lower back instead of the core",
+     "Bending the knees",
+     "Dropping fast — lower-back injury risk"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "shoulder-dislocates",
+  "category": "mobility",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 0.4,
+  "level_min": 1,
+  "level_max": 5,
+  "equipment": [
+   "rope"
+  ],
+  "primary_muscles": [
+   "shoulders"
+  ],
+  "secondary_muscles": [],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "მხრის დისლოკეიტი",
+    "short_desc": "მხრის მობილობა ჯოხით ან რეზინით",
+    "instructions": [
+     "დაიჭირე ჯოხი ან რეზინი განიერად",
+     "გადაიტანე სწორი ხელები თავზე უკან",
+     "მოძრაობა ნელი და უმტკივნეულოა",
+     "დაბრუნდი საწყის პოზიციაში"
+    ],
+    "common_mistakes": [
+     "ჩაჭიდება ძალიან ვიწროა",
+     "მოძრაობა სწრაფია",
+     "ტკივილის იგნორირება"
+    ]
+   },
+   "ru": {
+    "name": "Выкруты плеч",
+    "short_desc": "Мобильность плеча с палкой или резиной",
+    "instructions": [
+     "Возьми палку или резину широким хватом",
+     "Перенеси прямые руки над головой назад",
+     "Движение медленное и безболезненное",
+     "Вернись в исходное положение"
+    ],
+    "common_mistakes": [
+     "Слишком узкий хват",
+     "Быстрое движение",
+     "Игнорирование боли"
+    ]
+   },
+   "en": {
+    "name": "Shoulder dislocates",
+    "short_desc": "Shoulder mobility with a stick or band",
+    "instructions": [
+     "Hold a stick or band with a wide grip",
+     "Take straight arms overhead and behind",
+     "Move slowly and pain-free",
+     "Return to the start"
+    ],
+    "common_mistakes": [
+     "Grip too narrow",
+     "Moving too fast",
+     "Pushing through pain"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "cat-cow",
+  "category": "mobility",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 0.3,
+  "level_min": 1,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "spine"
+  ],
+  "secondary_muscles": [
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "კატა-ძროხა",
+    "short_desc": "ხერხემლის მობილობა",
+    "instructions": [
+     "ჩადექი ოთხზე, ხელები მხრების ქვეშ",
+     "ამოისუნთქე და მოამრგვალე ზურგი",
+     "ჩაისუნთქე და გადაიღუნე",
+     "იმოძრავე რიტმულად"
+    ],
+    "common_mistakes": [
+     "მოძრაობა მხოლოდ წელიდან",
+     "სუნთქვასთან შეუთანხმებლობა",
+     "ზედმეტი ამპლიტუდა"
+    ]
+   },
+   "ru": {
+    "name": "Кошка-корова",
+    "short_desc": "Мобильность позвоночника",
+    "instructions": [
+     "Встань на четвереньки, руки под плечами",
+     "На выдохе округли спину",
+     "На вдохе прогнись",
+     "Двигайся ритмично"
+    ],
+    "common_mistakes": [
+     "Движение только из поясницы",
+     "Несогласованность с дыханием",
+     "Избыточная амплитуда"
+    ]
+   },
+   "en": {
+    "name": "Cat-cow",
+    "short_desc": "Spinal mobility",
+    "instructions": [
+     "Get on all fours, hands under the shoulders",
+     "Exhale and round the back",
+     "Inhale and arch",
+     "Move rhythmically"
+    ],
+    "common_mistakes": [
+     "Moving only from the lower back",
+     "Breath out of sync",
+     "Forcing the range"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "hamstring-stretch",
+  "category": "mobility",
+  "force": "static",
+  "mechanic": "isolation",
+  "unit": "seconds",
+  "difficulty_coef": 0.3,
+  "level_min": 1,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "hamstrings"
+  ],
+  "secondary_muscles": [
+   "calves"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ბარძაყის უკანა ჯგუფის გაჭიმვა",
+    "short_desc": "აღდგენა და მობილობა",
+    "instructions": [
+     "დაჯექი, ერთი ფეხი გაშლილი",
+     "დაიხარე მენჯიდან, ზურგი სწორი",
+     "დაიჭირე 20–30 წამი",
+     "გაიმეორე მეორე ფეხზე"
+    ],
+    "common_mistakes": [
+     "ზურგის მრგვალება მენჯიდან დახრის ნაცვლად",
+     "ზამბარისებრი მოძრაობები",
+     "ტკივილამდე ჭიმვა"
+    ]
+   },
+   "ru": {
+    "name": "Растяжка задней поверхности бедра",
+    "short_desc": "Восстановление и мобильность",
+    "instructions": [
+     "Сядь, одна нога вытянута",
+     "Наклонись от таза, спина прямая",
+     "Удерживай 20–30 секунд",
+     "Повтори на другую ногу"
+    ],
+    "common_mistakes": [
+     "Круглая спина вместо наклона от таза",
+     "Пружинящие движения",
+     "Растяжка до боли"
+    ]
+   },
+   "en": {
+    "name": "Hamstring stretch",
+    "short_desc": "Recovery and mobility",
+    "instructions": [
+     "Sit with one leg extended",
+     "Hinge from the hips, back flat",
+     "Hold for 20–30 seconds",
+     "Repeat on the other leg"
+    ],
+    "common_mistakes": [
+     "Rounding the back instead of hinging",
+     "Bouncing",
+     "Stretching into pain"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "jumping-jacks",
+  "category": "cardio",
+  "force": "legs",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 0.35,
+  "level_min": 1,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "calves",
+   "shoulders"
+  ],
+  "secondary_muscles": [
+   "core"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "სახტომი",
+    "short_desc": "გახურების კლასიკა",
+    "instructions": [
+     "დადექი სწორად, ხელები სხეულთან",
+     "ახტი ფეხების გაშლით და ხელების ზემოთ აწევით",
+     "დაბრუნდი საწყის პოზიციაში",
+     "შეინარჩუნე რიტმი"
+    ],
+    "common_mistakes": [
+     "დაშვება სწორ ფეხებზე",
+     "ხელები ბოლომდე არ იწევა",
+     "რიტმის დაკარგვა"
+    ]
+   },
+   "ru": {
+    "name": "Прыжки «звёздочка»",
+    "short_desc": "Классика разминки",
+    "instructions": [
+     "Встань прямо, руки вдоль тела",
+     "Прыжком разведи ноги и подними руки вверх",
+     "Вернись в исходное положение",
+     "Держи ритм"
+    ],
+    "common_mistakes": [
+     "Приземление на прямые ноги",
+     "Руки не доходят до верха",
+     "Потеря ритма"
+    ]
+   },
+   "en": {
+    "name": "Jumping jacks",
+    "short_desc": "Warm-up classic",
+    "instructions": [
+     "Stand tall, arms at your sides",
+     "Jump the feet out and the arms overhead",
+     "Return to the start",
+     "Keep a steady rhythm"
+    ],
+    "common_mistakes": [
+     "Landing on straight legs",
+     "Arms not reaching overhead",
+     "Losing the rhythm"
+    ]
+   }
+  },
+  "progression_to": null
+ },
+ {
+  "slug": "burpee",
+  "category": "cardio",
+  "force": "legs",
+  "mechanic": "compound",
+  "unit": "reps",
+  "difficulty_coef": 1.5,
+  "level_min": 2,
+  "level_max": 5,
+  "equipment": [],
+  "primary_muscles": [
+   "quads",
+   "chest"
+  ],
+  "secondary_muscles": [
+   "core",
+   "shoulders"
+  ],
+  "skill_group": null,
+  "is_skill_unlock": false,
+  "unlock_bonus_xp": 0,
+  "unlock_threshold": 1,
+  "translations": {
+   "ka": {
+    "name": "ბერპი",
+    "short_desc": "მთელი სხეულის კარდიო",
+    "instructions": [
+     "ჩაჯექი და დადე ხელები იატაკზე",
+     "გადაისროლე ფეხები უკან პლანკის პოზიციაში",
+     "გააკეთე აჭიმი (არასავალდებულო)",
+     "დააბრუნე ფეხები და ახტი ზემოთ"
+    ],
+    "common_mistakes": [
+     "წელის გადაღუნვა პლანკში",
+     "ხტომის გამოტოვება",
+     "ტემპის დაკარგვა დაღლისას — ფორმა უფრო მნიშვნელოვანია"
+    ]
+   },
+   "ru": {
+    "name": "Бёрпи",
+    "short_desc": "Кардио на всё тело",
+    "instructions": [
+     "Присядь и поставь руки на пол",
+     "Выпрыгни ногами назад в планку",
+     "Сделай отжимание (необязательно)",
+     "Верни ноги и выпрыгни вверх"
+    ],
+    "common_mistakes": [
+     "Прогиб в пояснице в планке",
+     "Пропуск прыжка",
+     "Потеря техники при усталости — форма важнее темпа"
+    ]
+   },
+   "en": {
+    "name": "Burpee",
+    "short_desc": "Full-body conditioning",
+    "instructions": [
+     "Squat down and place the hands on the floor",
+     "Jump the feet back into a plank",
+     "Add a push-up (optional)",
+     "Jump the feet in and jump up"
+    ],
+    "common_mistakes": [
+     "Lower back arching in the plank",
+     "Skipping the jump",
+     "Form breaking down when tired — form beats pace"
+    ]
+   }
+  },
+  "progression_to": null
+ }
+]
