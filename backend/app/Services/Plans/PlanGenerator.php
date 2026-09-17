@@ -187,9 +187,13 @@ class PlanGenerator
             $candidates = $base->filter(fn ($e) => $e->level_min <= $level);
         }
 
+        // ზონის პირველი მოძრაობა — compound (squat, არა calf raise); იზოლაცია მეორე სლოტიდან
+        $firstInZone = collect($picked)->where('zone', $zone)->isEmpty();
+
         return $candidates
             ->sortBy([
                 fn ($a, $b) => $this->locationScore($b, $day->location) <=> $this->locationScore($a, $day->location),
+                fn ($a, $b) => $firstInZone ? ($b->mechanic === 'compound') <=> ($a->mechanic === 'compound') : 0,
                 fn ($a, $b) => crc32("{$seed}|{$a->slug}") <=> crc32("{$seed}|{$b->slug}"),
             ])
             ->first();
