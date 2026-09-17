@@ -35,4 +35,11 @@ return [
         ],
     ],
 
+    // $1/თვე premium (კალენდარის პლანერი). საიდუმლოები მხოლოდ სერვერის .env-შია.
+    'revenuecat' => [
+        'webhook_auth' => env('REVENUECAT_WEBHOOK_AUTH'),
+        'secret_key' => env('REVENUECAT_SECRET_KEY'),
+        'entitlement' => env('REVENUECAT_ENTITLEMENT', 'premium'),
+    ],
+
 ];

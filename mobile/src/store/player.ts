@@ -4,7 +4,7 @@ import { db } from '@/db';
 import { localSessions, localSets } from '@/db/schema';
 import { estimateSetXp } from '@/lib/xp';
 import { resolveLoop, type ResolvedLoop } from '@/lib/media';
-import type { PlannedExercise, Tempo } from '@/api/types';
+import type { PlannedExercise, SessionSource, Tempo } from '@/api/types';
 
 export type Phase = 'idle' | 'ready' | 'work' | 'rest' | 'summary';
 
@@ -39,8 +39,9 @@ export interface LoggedSet {
 interface PlayerState {
   clientUuid: string | null;
   programDayId: number | null;
+  planDayId: number | null;
   spotCheckinId: number | null;
-  source: 'program' | 'freestyle' | 'test';
+  source: SessionSource;
   bodyweightKg: number;
 
   exercises: PlayerExercise[];
@@ -57,9 +58,19 @@ interface PlayerState {
   start: (config: {
     exercises: PlayerExercise[];
     programDayId?: number | null;
+    planDayId?: number | null;
     spotCheckinId?: number | null;
-    source?: 'program' | 'freestyle' | 'test';
+    source?: SessionSource;
     bodyweightKg?: number;
+  }) => void;
+
+  /** გაიდ-პლეიერი (კეგელი) სეტებს თავად აგროვებს — პირდაპირ შეჯამებაზე */
+  completeGuided: (config: {
+    exercises: PlayerExercise[];
+    logged: LoggedSet[];
+    startedAt: string;
+    source: SessionSource;
+    painStop?: boolean;
   }) => void;
 
   beginWork: () => void;
@@ -81,8 +92,9 @@ interface PlayerState {
 const initial = {
   clientUuid: null,
   programDayId: null,
+  planDayId: null,
   spotCheckinId: null,
-  source: 'freestyle' as const,
+  source: 'freestyle' as SessionSource,
   bodyweightKg: 75,
   exercises: [],
   logged: [],
@@ -98,18 +110,32 @@ const initial = {
 export const usePlayer = create<PlayerState>((set, get) => ({
   ...initial,
 
-  start({ exercises, programDayId = null, spotCheckinId = null, source = 'freestyle', bodyweightKg = 75 }) {
+  start({ exercises, programDayId = null, planDayId = null, spotCheckinId = null, source = 'freestyle', bodyweightKg = 75 }) {
     set({
       ...initial,
       clientUuid: Crypto.randomUUID(),
       exercises,
       programDayId,
+      planDayId,
       spotCheckinId,
       source,
       bodyweightKg,
       phase: 'ready',
       startedAt: new Date().toISOString(),
       setStartedAt: new Date().toISOString(),
+    });
+  },
+
+  completeGuided({ exercises, logged, startedAt, source, painStop = false }) {
+    set({
+      ...initial,
+      clientUuid: Crypto.randomUUID(),
+      exercises,
+      logged,
+      source,
+      painStop,
+      startedAt,
+      phase: 'summary',
     });
   },
 
@@ -209,6 +235,7 @@ export const usePlayer = create<PlayerState>((set, get) => ({
     await db.insert(localSessions).values({
       clientUuid: state.clientUuid,
       programDayId: state.programDayId,
+      planDayId: state.planDayId,
       spotCheckinId: state.spotCheckinId,
       startedAt: state.startedAt,
       completedAt: completedAt.toISOString(),
@@ -275,6 +302,6 @@ export function toPlayerExercises(planned: PlannedExercise[]): PlayerExercise[] 
       targetReps: item.target_reps,
       targetSeconds: item.target_seconds,
       restSeconds: item.rest_seconds,
-      tempo: item.tempo,
+      tempo: item.tempo ?? 'normal',
     }));
 }

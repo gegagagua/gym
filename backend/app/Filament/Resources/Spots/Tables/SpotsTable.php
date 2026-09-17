@@ -30,6 +30,8 @@ class SpotsTable
                 TextColumn::make('name')->searchable()->wrap()->weight('bold'),
                 TextColumn::make('city.slug')->label('ქალაქი')->badge()->color('gray'),
                 TextColumn::make('type')->badge(),
+                TextColumn::make('source')->label('წყარო')->badge()->color('gray')->default('—'),
+                TextColumn::make('address')->label('მისამართი')->toggleable(isToggledHiddenByDefault: true)->wrap(),
                 TextColumn::make('status')->badge()->color(fn ($state) => match ($state) {
                     'verified' => 'success', 'pending' => 'warning', default => 'danger',
                 }),
@@ -48,6 +50,9 @@ class SpotsTable
                     'verified' => 'დადასტურებული',
                     'rejected' => 'უარყოფილი',
                 ])->default('pending'),
+                SelectFilter::make('source')->label('წყარო')->options([
+                    'seed' => 'seed', 'ugc' => 'UGC', 'osm' => 'OpenStreetMap', 'web' => 'ვებ',
+                ]),
                 SelectFilter::make('type')->options([
                     'yard' => 'ეზო', 'park' => 'პარკი', 'school' => 'სკოლა',
                     'stadium' => 'სტადიონი', 'commercial' => 'კომერციული',

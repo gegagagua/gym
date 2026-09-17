@@ -11,6 +11,9 @@ import type {
   SessionSyncResponse,
   SpotDetail,
   Stats,
+  SubscriptionState,
+  TrainingPlan,
+  PlanCreateRequest,
 } from './types';
 
 export const auth = {
@@ -117,4 +120,17 @@ export const share = {
   create: (type: 'session' | 'streak' | 'league' | 'record', session_id?: number) =>
     api<{ card: { id: number; status: string } }>('/share/card', { method: 'POST', body: { type, session_id } }),
   get: (id: number) => api<{ card: { id: number; status: string; url: string | null } }>(`/share/card/${id}`),
+};
+
+export const billing = {
+  get: () => api<SubscriptionState>('/me/subscription'),
+  /** ყიდვის/აღდგენის შემდეგ — სერვერი RevenueCat-ს პირდაპირ ეკითხება */
+  sync: () => api<SubscriptionState>('/me/subscription/sync', { method: 'POST' }),
+};
+
+export const plan = {
+  /** 402 `premium_required` → paywall */
+  get: () => api<{ plan: TrainingPlan | null }>('/me/plan'),
+  create: (body: PlanCreateRequest) => api<{ plan: TrainingPlan }>('/me/plan', { method: 'POST', body }),
+  cancel: () => api<{ plan: null }>('/me/plan', { method: 'DELETE' }),
 };

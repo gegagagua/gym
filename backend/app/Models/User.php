@@ -82,6 +82,32 @@ class User extends Authenticatable implements FilamentUser, HasName
         return $this->hasMany(UserBadge::class);
     }
 
+    public function subscriptions(): HasMany
+    {
+        return $this->hasMany(Subscription::class);
+    }
+
+    public function trainingPlans(): HasMany
+    {
+        return $this->hasMany(TrainingPlan::class);
+    }
+
+    /** premium წვდომა — ერთადერთი წყარო სერვერზე; კლიენტის „მე premium ვარ" არ იკითხება */
+    public function premiumSubscription(): ?Subscription
+    {
+        return $this->subscriptions()
+            ->where('entitlement', Subscription::PREMIUM)
+            ->grantingAccess()
+            ->orderByRaw('expires_at IS NULL DESC')
+            ->orderByDesc('expires_at')
+            ->first();
+    }
+
+    public function hasPremium(): bool
+    {
+        return $this->premiumSubscription() !== null;
+    }
+
     public function isGuest(): bool
     {
         return $this->provider === 'guest';

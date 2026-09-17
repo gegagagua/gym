@@ -9,6 +9,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Exercise extends Model
 {
+    /** ბიბლიოთეკის დაჯგუფება და პლანერის ფოკუსი */
+    public const ZONES = [
+        'chest', 'back', 'shoulders', 'arms', 'core', 'legs',
+        'pelvic_floor', 'full_body', 'mobility',
+    ];
+
+    /** დარბაზის ინვენტარი — მოედნებზე არ გვხდება, ამიტომ SpotEquipment::TAGS-ში არ არის */
+    public const GYM_TAGS = ['barbell', 'dumbbell', 'kettlebell', 'cable', 'machine'];
+
     protected $guarded = ['id'];
 
     protected function casts(): array

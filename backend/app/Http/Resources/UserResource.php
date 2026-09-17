@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Controllers\Api\V1\BillingController;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -21,6 +22,10 @@ class UserResource extends JsonResource
             'country_code' => $this->country_code,
             'is_guest' => $this->isGuest(),
             'social_enabled' => (bool) $this->social_enabled,
+            'subscription' => $this->when(
+                $request->user()?->id === $this->id,
+                fn () => BillingController::describe($this->resource),
+            ),
             'phone' => $this->when($request->user()?->id === $this->id, $this->phone),
             'email' => $this->when($request->user()?->id === $this->id, $this->email),
             'profile' => $profile ? [

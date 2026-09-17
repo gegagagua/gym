@@ -18,6 +18,7 @@ class ExerciseResource extends JsonResource
             'name' => $t?->name ?? $this->slug,
             'short_desc' => $t?->short_desc,
             'category' => $this->category,
+            'zone' => $this->zone,
             'force' => $this->force,
             'mechanic' => $this->mechanic,
             'unit' => $this->unit,

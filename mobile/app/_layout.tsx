@@ -99,6 +99,10 @@ export default function RootLayout() {
             <Stack.Screen name="exercise/[id]" options={{ animation: 'slide_from_bottom' }} />
             <Stack.Screen name="spot/[id]" options={{ animation: 'slide_from_bottom' }} />
             <Stack.Screen name="spot/new" options={{ animation: 'slide_from_bottom' }} />
+            <Stack.Screen name="plan/index" options={{ animation: 'slide_from_bottom' }} />
+            <Stack.Screen name="plan/setup" />
+            <Stack.Screen name="paywall" options={{ animation: 'slide_from_bottom' }} />
+            <Stack.Screen name="kegel" options={{ animation: 'slide_from_bottom', gestureEnabled: false }} />
           </Stack>
         </QueryClientProvider>
       </SafeAreaProvider>

@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\BillingController;
 use App\Http\Controllers\Api\V1\ContentController;
 use App\Http\Controllers\Api\V1\ExerciseController;
 use App\Http\Controllers\Api\V1\LeagueController;
 use App\Http\Controllers\Api\V1\MeController;
+use App\Http\Controllers\Api\V1\PlanController;
 use App\Http\Controllers\Api\V1\ProgramController;
 use App\Http\Controllers\Api\V1\SessionController;
 use App\Http\Controllers\Api\V1\ShareController;
@@ -25,6 +27,9 @@ Route::prefix('v1')->group(function () {
     Route::post('/auth/otp/verify', [AuthController::class, 'verifyOtp'])->middleware('throttle:10,60');
     Route::post('/auth/social', [AuthController::class, 'social'])->middleware('throttle:20,60');
     Route::post('/auth/guest', [AuthController::class, 'guest'])->middleware('throttle:10,60');
+
+    // RevenueCat webhook — ავტორიზაცია Authorization ჰედერის საიდუმლოთი
+    Route::post('/webhooks/revenuecat', [BillingController::class, 'revenueCatWebhook'])->middleware('throttle:120,1');
 
     // კონტენტი სტუმრისთვისაც ხელმისაწვდომია — ონბორდინგამდე
     Route::get('/exercises', [ExerciseController::class, 'index']);
@@ -50,6 +55,15 @@ Route::prefix('v1')->group(function () {
         Route::post('/me/level-test', [MeController::class, 'submitLevelTest']);
         Route::get('/me/stats', [MeController::class, 'stats']);
         Route::get('/me/records', [MeController::class, 'records']);
+
+        // premium: $1/თვე — სტატუსი მხოლოდ RevenueCat-იდან (BillingController)
+        Route::get('/me/subscription', [BillingController::class, 'show']);
+        Route::post('/me/subscription/sync', [BillingController::class, 'sync'])->middleware('throttle:20,60');
+
+        // კალენდარის პლანერი
+        Route::get('/me/plan', [PlanController::class, 'show'])->middleware('premium');
+        Route::post('/me/plan', [PlanController::class, 'store'])->middleware(['premium', 'throttle:20,60']);
+        Route::delete('/me/plan', [PlanController::class, 'destroy']);
 
         Route::post('/programs/{program}/enroll', [ProgramController::class, 'enroll']);
         Route::get('/me/program', [ProgramController::class, 'current']);

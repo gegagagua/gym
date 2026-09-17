@@ -22,6 +22,7 @@ class ExerciseSeeder extends Seeder
                 ['slug' => $row['slug']],
                 [
                     'category' => $row['category'],
+                    'zone' => $row['zone'] ?? null,
                     'force' => $row['force'],
                     'mechanic' => $row['mechanic'],
                     'unit' => $row['unit'],

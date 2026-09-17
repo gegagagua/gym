@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\EnsurePremium;
 use App\Http\Middleware\SetLocale;
 use App\Http\Middleware\TouchLastActive;
 use App\Jobs\PurgeDeletedAccounts;
@@ -19,6 +20,8 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+        $middleware->alias(['premium' => EnsurePremium::class]);
+
         $middleware->api(prepend: [
             SetLocale::class,
             TouchLastActive::class,

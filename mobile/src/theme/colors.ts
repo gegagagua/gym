@@ -110,5 +110,19 @@ export const forceTheme = {
   core: '#FFD166',
 } as const;
 
+/** სხეულის ზონა — ბიბლიოთეკის დაჯგუფება და პლანერის ფოკუსი */
+export const zoneTheme = {
+  chest: palette.lime,
+  back: palette.violet,
+  shoulders: palette.cyan,
+  arms: palette.ember,
+  core: '#FFD166',
+  legs: '#4DD9A0',
+  pelvic_floor: '#FF7EB6',
+  full_body: palette.chalk,
+  mobility: '#8FA3FF',
+} as const;
+
 export type DivisionId = keyof typeof divisionTheme;
 export type ForceKey = keyof typeof forceTheme;
+export type ZoneKey = keyof typeof zoneTheme;

@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             BadgeSeeder::class,
             FeatureFlagSeeder::class,
             SpotSeeder::class,
+            TbilisiSpotSeeder::class,
         ]);
 
         // ლოკალური ადმინი Filament-ისთვის

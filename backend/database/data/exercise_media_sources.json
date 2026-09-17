@@ -270,6 +270,446 @@
         "Burpee 7 Land.jpg",
         "Burpee 8 Come Upright.jpg"
       ]
+    },
+    "wide-push-up": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Push-Up_Wide/0.jpg",
+        "Push-Up_Wide/1.jpg"
+      ],
+      "credit": "Push-Up Wide"
+    },
+    "decline-push-up": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Decline_Push-Up/0.jpg",
+        "Decline_Push-Up/1.jpg"
+      ],
+      "credit": "Decline Push-Up"
+    },
+    "machine-chest-press": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Leverage_Chest_Press/0.jpg",
+        "Leverage_Chest_Press/1.jpg"
+      ],
+      "credit": "Leverage Chest Press"
+    },
+    "dumbbell-bench-press": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Dumbbell_Bench_Press/0.jpg",
+        "Dumbbell_Bench_Press/1.jpg"
+      ],
+      "credit": "Dumbbell Bench Press"
+    },
+    "incline-dumbbell-press": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Incline_Dumbbell_Press/0.jpg",
+        "Incline_Dumbbell_Press/1.jpg"
+      ],
+      "credit": "Incline Dumbbell Press"
+    },
+    "barbell-bench-press": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Barbell_Bench_Press_-_Medium_Grip/0.jpg",
+        "Barbell_Bench_Press_-_Medium_Grip/1.jpg"
+      ],
+      "credit": "Barbell Bench Press - Medium Grip"
+    },
+    "dumbbell-fly": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Dumbbell_Flyes/0.jpg",
+        "Dumbbell_Flyes/1.jpg"
+      ],
+      "credit": "Dumbbell Flyes"
+    },
+    "cable-crossover": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Cable_Crossover/0.jpg",
+        "Cable_Crossover/1.jpg"
+      ],
+      "credit": "Cable Crossover"
+    },
+    "superman": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Superman/0.jpg",
+        "Superman/1.jpg"
+      ],
+      "credit": "Superman"
+    },
+    "scapular-pull-up": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Scapular_Pull-Up/0.jpg",
+        "Scapular_Pull-Up/1.jpg"
+      ],
+      "credit": "Scapular Pull-Up"
+    },
+    "lat-pulldown": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Wide-Grip_Lat_Pulldown/0.jpg",
+        "Wide-Grip_Lat_Pulldown/1.jpg"
+      ],
+      "credit": "Wide-Grip Lat Pulldown"
+    },
+    "seated-cable-row": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Seated_Cable_Rows/0.jpg",
+        "Seated_Cable_Rows/1.jpg"
+      ],
+      "credit": "Seated Cable Rows"
+    },
+    "one-arm-dumbbell-row": {
+      "provider": "free-exercise-db",
+      "files": [
+        "One-Arm_Dumbbell_Row/0.jpg",
+        "One-Arm_Dumbbell_Row/1.jpg"
+      ],
+      "credit": "One-Arm Dumbbell Row"
+    },
+    "barbell-row": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Bent_Over_Barbell_Row/0.jpg",
+        "Bent_Over_Barbell_Row/1.jpg"
+      ],
+      "credit": "Bent Over Barbell Row"
+    },
+    "deadlift": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Barbell_Deadlift/0.jpg",
+        "Barbell_Deadlift/1.jpg"
+      ],
+      "credit": "Barbell Deadlift"
+    },
+    "back-extension": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Hyperextensions_Back_Extensions/0.jpg",
+        "Hyperextensions_Back_Extensions/1.jpg"
+      ],
+      "credit": "Hyperextensions (Back Extensions)"
+    },
+    "dumbbell-shoulder-press": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Dumbbell_Shoulder_Press/0.jpg",
+        "Dumbbell_Shoulder_Press/1.jpg"
+      ],
+      "credit": "Dumbbell Shoulder Press"
+    },
+    "machine-shoulder-press": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Machine_Shoulder_Military_Press/0.jpg",
+        "Machine_Shoulder_Military_Press/1.jpg"
+      ],
+      "credit": "Machine Shoulder (Military) Press"
+    },
+    "overhead-press": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Standing_Military_Press/0.jpg",
+        "Standing_Military_Press/1.jpg"
+      ],
+      "credit": "Standing Military Press"
+    },
+    "dumbbell-lateral-raise": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Side_Lateral_Raise/0.jpg",
+        "Side_Lateral_Raise/1.jpg"
+      ],
+      "credit": "Side Lateral Raise"
+    },
+    "face-pull": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Face_Pull/0.jpg",
+        "Face_Pull/1.jpg"
+      ],
+      "credit": "Face Pull"
+    },
+    "rear-delt-fly": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Reverse_Flyes/0.jpg",
+        "Reverse_Flyes/1.jpg"
+      ],
+      "credit": "Reverse Flyes"
+    },
+    "barbell-curl": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Barbell_Curl/0.jpg",
+        "Barbell_Curl/1.jpg"
+      ],
+      "credit": "Barbell Curl"
+    },
+    "dumbbell-hammer-curl": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Hammer_Curls/0.jpg",
+        "Hammer_Curls/1.jpg"
+      ],
+      "credit": "Hammer Curls"
+    },
+    "triceps-pushdown": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Triceps_Pushdown/0.jpg",
+        "Triceps_Pushdown/1.jpg"
+      ],
+      "credit": "Triceps Pushdown"
+    },
+    "skull-crusher": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Lying_Triceps_Press/0.jpg",
+        "Lying_Triceps_Press/1.jpg"
+      ],
+      "credit": "Lying Triceps Press"
+    },
+    "overhead-dumbbell-triceps-extension": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Standing_Dumbbell_Triceps_Extension/0.jpg",
+        "Standing_Dumbbell_Triceps_Extension/1.jpg"
+      ],
+      "credit": "Standing Dumbbell Triceps Extension"
+    },
+    "dead-bug": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Dead_Bug/0.jpg",
+        "Dead_Bug/1.jpg"
+      ],
+      "credit": "Dead Bug"
+    },
+    "bicycle-crunch": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Air_Bike/0.jpg",
+        "Air_Bike/1.jpg"
+      ],
+      "credit": "Air Bike"
+    },
+    "v-up": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Jackknife_Sit-Up/0.jpg",
+        "Jackknife_Sit-Up/1.jpg"
+      ],
+      "credit": "Jackknife Sit-Up"
+    },
+    "decline-crunch": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Decline_Crunch/0.jpg",
+        "Decline_Crunch/1.jpg"
+      ],
+      "credit": "Decline Crunch"
+    },
+    "machine-crunch": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Ab_Crunch_Machine/0.jpg",
+        "Ab_Crunch_Machine/1.jpg"
+      ],
+      "credit": "Ab Crunch Machine"
+    },
+    "cable-crunch": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Cable_Crunch/0.jpg",
+        "Cable_Crunch/1.jpg"
+      ],
+      "credit": "Cable Crunch"
+    },
+    "pallof-press": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Pallof_Press/0.jpg",
+        "Pallof_Press/1.jpg"
+      ],
+      "credit": "Pallof Press"
+    },
+    "cable-woodchop": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Standing_Cable_Wood_Chop/0.jpg",
+        "Standing_Cable_Wood_Chop/1.jpg"
+      ],
+      "credit": "Standing Cable Wood Chop"
+    },
+    "jump-squat": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Freehand_Jump_Squat/0.jpg",
+        "Freehand_Jump_Squat/1.jpg"
+      ],
+      "credit": "Freehand Jump Squat"
+    },
+    "single-leg-glute-bridge": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Single_Leg_Glute_Bridge/0.jpg",
+        "Single_Leg_Glute_Bridge/1.jpg"
+      ],
+      "credit": "Single Leg Glute Bridge"
+    },
+    "walking-lunge": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Bodyweight_Walking_Lunge/0.jpg",
+        "Bodyweight_Walking_Lunge/1.jpg"
+      ],
+      "credit": "Bodyweight Walking Lunge"
+    },
+    "step-up-knee-raise": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Step-up_with_Knee_Raise/0.jpg",
+        "Step-up_with_Knee_Raise/1.jpg"
+      ],
+      "credit": "Step-up with Knee Raise"
+    },
+    "nordic-curl-negative": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Floor_Glute-Ham_Raise/0.jpg",
+        "Floor_Glute-Ham_Raise/1.jpg"
+      ],
+      "credit": "Floor Glute-Ham Raise"
+    },
+    "goblet-squat": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Goblet_Squat/0.jpg",
+        "Goblet_Squat/1.jpg"
+      ],
+      "credit": "Goblet Squat"
+    },
+    "leg-press": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Leg_Press/0.jpg",
+        "Leg_Press/1.jpg"
+      ],
+      "credit": "Leg Press"
+    },
+    "leg-extension": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Leg_Extensions/0.jpg",
+        "Leg_Extensions/1.jpg"
+      ],
+      "credit": "Leg Extensions"
+    },
+    "lying-leg-curl": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Lying_Leg_Curls/0.jpg",
+        "Lying_Leg_Curls/1.jpg"
+      ],
+      "credit": "Lying Leg Curls"
+    },
+    "back-squat": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Barbell_Squat/0.jpg",
+        "Barbell_Squat/1.jpg"
+      ],
+      "credit": "Barbell Squat"
+    },
+    "romanian-deadlift": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Romanian_Deadlift/0.jpg",
+        "Romanian_Deadlift/1.jpg"
+      ],
+      "credit": "Romanian Deadlift"
+    },
+    "dumbbell-lunge": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Dumbbell_Lunges/0.jpg",
+        "Dumbbell_Lunges/1.jpg"
+      ],
+      "credit": "Dumbbell Lunges"
+    },
+    "barbell-hip-thrust": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Barbell_Hip_Thrust/0.jpg",
+        "Barbell_Hip_Thrust/1.jpg"
+      ],
+      "credit": "Barbell Hip Thrust"
+    },
+    "standing-calf-raise-machine": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Standing_Calf_Raises/0.jpg",
+        "Standing_Calf_Raises/1.jpg"
+      ],
+      "credit": "Standing Calf Raises"
+    },
+    "mountain-climber": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Mountain_Climbers/0.jpg",
+        "Mountain_Climbers/1.jpg"
+      ],
+      "credit": "Mountain Climbers"
+    },
+    "kettlebell-thruster": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Kettlebell_Thruster/0.jpg",
+        "Kettlebell_Thruster/1.jpg"
+      ],
+      "credit": "Kettlebell Thruster"
+    },
+    "hip-flexor-stretch": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Kneeling_Hip_Flexor/0.jpg",
+        "Kneeling_Hip_Flexor/1.jpg"
+      ],
+      "credit": "Kneeling Hip Flexor"
+    },
+    "childs-pose": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Childs_Pose/0.jpg",
+        "Childs_Pose/1.jpg"
+      ],
+      "credit": "Child's Pose"
+    },
+    "wrist-circles": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Wrist_Circles/0.jpg",
+        "Wrist_Circles/1.jpg"
+      ],
+      "credit": "Wrist Circles"
+    },
+    "worlds-greatest-stretch": {
+      "provider": "free-exercise-db",
+      "files": [
+        "Worlds_Greatest_Stretch/0.jpg",
+        "Worlds_Greatest_Stretch/1.jpg"
+      ],
+      "credit": "World's Greatest Stretch"
     }
   },
   "pending_own_footage": {
@@ -283,6 +723,40 @@
     "tuck-front-lever": "own footage — spec 13.3 hero move",
     "tuck-planche": "own footage — spec 13.3 hero move",
     "planche": "own footage — spec 13.3 hero move",
-    "dragon-flag": "own footage — spec 13.3 hero move"
+    "dragon-flag": "own footage — spec 13.3 hero move",
+    "ring-push-up": "own footage — open-source frames use suspension straps, not rings",
+    "outdoor-chest-press": "own footage — outdoor park machines differ from indoor gym frames",
+    "reverse-snow-angel": "own footage — no categorised open-source frame",
+    "prone-ytw-raise": "own footage — no categorised open-source frame",
+    "ring-row": "own footage — open-source frames use suspension straps, not rings",
+    "assisted-pull-up-machine": "own footage — no open-source frame of the assisted pull-up machine",
+    "plank-to-down-dog": "own footage — no categorised open-source frame",
+    "pike-push-up": "own footage — no categorised open-source frame",
+    "elevated-pike-push-up": "own footage — no categorised open-source frame",
+    "wall-handstand-hold": "own footage — no categorised open-source frame",
+    "bar-support-hold": "own footage — no categorised open-source frame",
+    "ring-support-hold": "own footage — no categorised open-source frame",
+    "towel-curl": "own footage — no categorised open-source frame",
+    "close-grip-push-up": "own footage — open-source frames show the incline or diamond variant only",
+    "sphinx-push-up": "own footage — no categorised open-source frame",
+    "bar-triceps-extension": "own footage — no categorised open-source frame",
+    "low-bar-biceps-curl": "own footage — no categorised open-source frame",
+    "bird-dog": "own footage — no categorised open-source frame",
+    "plank-shoulder-tap": "own footage — no categorised open-source frame",
+    "lying-leg-raise": "own footage — open-source frame is the bench variant",
+    "toes-to-bar": "own footage — no categorised open-source frame",
+    "wall-sit": "own footage — no categorised open-source frame",
+    "squat-thrust": "own footage — no categorised open-source frame",
+    "bear-crawl": "own footage — no categorised open-source frame",
+    "kettlebell-swing": "own footage — open-source frames show the one-arm variant without instructions",
+    "farmers-walk": "own footage — open-source frames use strongman handles, not dumbbells",
+    "deep-squat-hold": "own footage — no categorised open-source frame",
+    "thoracic-open-book": "own footage — no categorised open-source frame",
+    "kegel-basic-hold": "pelvic floor is not visible — guided animation in app",
+    "kegel-quick-flick": "pelvic floor is not visible — guided animation in app",
+    "kegel-long-hold": "pelvic floor is not visible — guided animation in app",
+    "kegel-elevator": "pelvic floor is not visible — guided animation in app",
+    "kegel-reverse-relax": "pelvic floor is not visible — guided animation in app",
+    "glute-bridge-kegel": "pelvic floor is not visible — guided animation in app"
   }
 }

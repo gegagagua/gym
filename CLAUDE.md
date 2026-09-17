@@ -21,7 +21,7 @@ export PATH="/opt/homebrew/opt/php@8.3/bin:/opt/homebrew/opt/postgresql@17/bin:$
 # backend
 cd backend
 php artisan serve                 # http://localhost:8000
-php artisan test                  # 62 ტესტი
+php artisan test                  # 85 ტესტი
 php artisan exercises:fetch-media # სავარჯიშოს ლუპები ღია წყაროებიდან
 ./vendor/bin/pint                 # ფორმატირება (commit-მდე გაუშვი)
 php artisan migrate:fresh --seed
@@ -70,6 +70,25 @@ GIF-ს `AnimatedGif` აწყობს წმინდა PHP-ით — Image
 (`SessionSyncService::isTooThin`). ამიტომ თავისუფალი ვარჯიში კალათაა
 (`store/freestyle.ts`) და არა „ერთი სავარჯიშო → დაწყება" — ლიმიტი UI-შივე ჩანს.
 
+**Premium ($1/თვე) მხოლოდ სერვერზე ისაზღვრება.** წყარო — `subscriptions`
+ცხრილი, რომელსაც RevenueCat-ის webhook (`/v1/webhooks/revenuecat`) ან
+ადმინის `manual` რიგი ავსებს. მობაილის „ყიდვა წარმატებულია" premium-ს
+არ ჩართავს — ყიდვის შემდეგ `/me/subscription/sync`. წვდომა `expires_at`-იდან
+ითვლება (`cancelled` ვადის ბოლომდე მოქმედია). ფასიანი მხოლოდ კალენდარის
+პლანერია (`premium` middleware) — ბიბლიოთეკა, კეგელი, რუკა, ლიგა უფასოა.
+
+**პლანერის ჯანმრთელობის ლიმიტები (`PlanGenerator`):** კვირაში ≤ 6 ვარჯიში,
+სესია ≤ `session.max_minutes`, 4+ კვირაზე ბოლო კვირა deload, რთული hold-ის
+ჭერი (`HOLD_CAP`). გენერატორი დეტერმინისტულია — ტესტები ამას ეყრდნობა.
+
+**კეგელი გაიდ-პლეიერია, არა ვიდეო.** pelvic floor გარედან არ ჩანს; რიტმი
+`features/kegel/routines.ts`-შია, ყოველი ბლოკი = ერთი სეტი (`source: 'kegel'`).
+თუ სავარჯიშოს საკუთარი ვიდეო ჩაემატება, ის სქემის ადგილას ჩნდება.
+
+**თბილისის მოედნები OSM-იდანაა** (`database/data/tbilisi_spots.json`, ODbL —
+ატრიბუცია `/v1/attributions`-ში ავტომატურად). ინვენტარი გამოგონილი არ
+ემატება: OSM-ში ტეგის გარეშე სადგური ტეგის გარეშე რჩება.
+
 ## კონვენციები
 
 - **ტექსტი მობაილზე:** ნედლი `<Text>` არ გამოიყენება — მხოლოდ
@@ -83,8 +102,12 @@ GIF-ს `AnimatedGif` აწყობს წმინდა PHP-ით — Image
 - **მიგრაციები:** ახალი ცხრილი დაამატე ცალკე ფაილად, არსებულს ნუ შეცვლი,
   თუ ბაზა უკვე გაშვებულია სადმე გარდა ლოკალურისა.
 - **ინვენტარის ორი ლექსიკონი:** პროფილში წვდომის დონეა (`none|bar|yard|gym`),
-  სავარჯიშოზე ფიზიკური ტეგი (`pull_up_bar`…). თარგმანი მხოლოდ
-  `ExerciseController::expandEquipment`-შია — სხვაგან ნუ გაამრავლებ.
+  სავარჯიშოზე ფიზიკური ტეგი (`pull_up_bar`…, დარბაზის `Exercise::GYM_TAGS`).
+  თარგმანი მხოლოდ `ExerciseController::expandEquipment`-შია (პლანერიც მას
+  იძახის) — სხვაგან ნუ გაამრავლებ.
+- **ზონები:** ყოველ სავარჯიშოს ერთი `zone` (`Exercise::ZONES`) — ბიბლიოთეკის
+  დაჯგუფება და პლანერის ფოკუსი. ახალი სავარჯიშო `zone`-ის გარეშე პლანერში
+  არ მოხვდება.
 - **მედიის რენდერერი:** GIF/სურათი → `expo-image`, mp4 → `expo-video`.
   არჩევანი `src/lib/media.ts`-შია; `expo-video`-ში ჩაწოდებული GIF შეცდომას
   არ აგდებს — უბრალოდ უძრავი რჩება, ამიტომ პირდაპირ ნუ გამოიყენებ.
@@ -101,8 +124,10 @@ GIF-ს `AnimatedGif` აწყობს წმინდა PHP-ით — Image
 
 ## რაც ჯერ არ არის
 
-11 მოძრაობის ილუსტრაცია (planche, tuck-planche, tuck-front-lever,
-dragon flag, dead hang, hollow body, wall/knee push-up… — ღია წყაროში
-არ არსებობს, სია `pending_own_footage`-შია), SMS პროვაიდერი,
+45 მოძრაობის ილუსტრაცია (planche, dragon flag, pike push-up, bird dog,
+რგოლები, 6 კეგელი… — ღია წყაროში არ არსებობს, სია `pending_own_footage`-შია),
+RevenueCat-ის key-ები (`app.json` → `extra.revenuecat`, სერვერზე
+`REVENUECAT_*`) და App Store / Play-ის პროდუქტი, კონფიდენციალურობის
+პოლიტიკის URL (`extra.legal.privacyUrl`), SMS პროვაიდერი,
 Google/Apple Sign-In SDK კლიენტზე, R2-ის რეალური კრედენშელები,
-თბილისის 200 მოედნის ხელით შევსება.
+OSM-ის 314 გარე მოედნიდან ინვენტარი მხოლოდ 11-ზე — დანარჩენი ველზე გადასამოწმებელია.

@@ -20,8 +20,10 @@ import {
 } from '@/components';
 import { StreakCard } from '@/features/home/StreakCard';
 import { MuscleMap } from '@/features/home/MuscleMap';
-import { colors, radius, space, border } from '@/theme';
-import { me as meApi, programs as programsApi } from '@/api/endpoints';
+import { colors, radius, space, border, zoneTheme } from '@/theme';
+import { me as meApi, programs as programsApi, plan as planApi } from '@/api/endpoints';
+import { usePremium } from '@/lib/premium';
+import { LOCATION_ICON } from '@/features/plan/labels';
 import { formatXp } from '@/lib/xp';
 import { pendingCount, flushQueue } from '@/db/sync';
 import { usePlayer, toPlayerExercises } from '@/store/player';
@@ -46,6 +48,10 @@ export default function TodayScreen() {
   const today = useQuery({ queryKey: ['program', 'current'], queryFn: () => programsApi.current() });
   const pending = useQuery({ queryKey: ['pending'], queryFn: pendingCount, refetchInterval: 30_000 });
   const checkin = useQuery({ queryKey: ['checkin'], queryFn: () => meApi.checkin() });
+  const { isPremium } = usePremium();
+  // პლანერი premium-ია — უ-premium-ოდ 402-ს ნუ ვიწვევთ
+  const calendar = useQuery({ queryKey: ['plan'], queryFn: () => planApi.get(), enabled: isPremium });
+  const planToday = calendar.data?.plan?.days.find((day) => day.date === calendar.data?.plan?.today) ?? null;
 
   const refresh = useCallback(async () => {
     setRefreshing(true);
@@ -68,6 +74,21 @@ export default function TodayScreen() {
       programDayId: plan?.id ?? null,
       spotCheckinId: checkin.data?.checkin?.id ?? null,
       source: plan?.type === 'test' ? 'test' : 'program',
+      bodyweightKg: user?.profile?.weight_kg ?? 75,
+    });
+
+    router.push('/player');
+  };
+
+  const beginPlanDay = () => {
+    const exercises = toPlayerExercises(planToday?.exercises ?? []);
+    if (!planToday || exercises.length === 0) return;
+
+    startSession({
+      exercises,
+      planDayId: planToday.id,
+      source: 'plan',
+      spotCheckinId: checkin.data?.checkin?.id ?? null,
       bodyweightKg: user?.profile?.weight_kg ?? 75,
     });
 
@@ -241,12 +262,117 @@ export default function TodayScreen() {
         </Tap>
       ) : null}
 
-      {/* ---- Streak ---- */}
+      {/* ---- კალენდარი (premium) ---- */}
       <Reveal index={5}>
-        <SectionHeader title={t('home.weekProgress')} />
+        <SectionHeader
+          title={t('plan.title')}
+          action={
+            <Tap onPress={() => router.push('/plan')} hitSlop={10}>
+              <Text variant="label" tone="accent">
+                {t('plan.open')} →
+              </Text>
+            </Tap>
+          }
+        />
       </Reveal>
 
       <Reveal index={6}>
+        {isPremium && calendar.isLoading ? (
+          <Skeleton height={120} round={20} />
+        ) : isPremium && calendar.data?.plan && planToday ? (
+          <Card accent={planToday.completed_at ? colors.success : colors.accent}>
+            <Text variant="overline" tone="muted">
+              {t('plan.todayByPlan')}
+            </Text>
+            {planToday.type === 'rest' ? (
+              <Text variant="heading" style={{ marginTop: space.xs }}>
+                {t('home.restDay')}
+              </Text>
+            ) : (
+              <>
+                <Text variant="heading" style={{ marginTop: space.xs }}>
+                  {t(`plan.split_${planToday.split}`)}
+                  {planToday.location ? ` · ${LOCATION_ICON[planToday.location]} ${t(`plan.loc_${planToday.location}`)}` : ''}
+                </Text>
+                <View style={{ flexDirection: 'row', gap: space.sm, marginTop: space.xs, flexWrap: 'wrap' }}>
+                  {planToday.focus.map((zone) => (
+                    <Text key={zone} variant="caption" style={{ color: zoneTheme[zone] }}>
+                      ● {t(`library.zone_${zone}`)}
+                    </Text>
+                  ))}
+                  {planToday.est_minutes ? (
+                    <Text variant="caption" tone="muted">
+                      ~{planToday.est_minutes} {t('common.min')}
+                    </Text>
+                  ) : null}
+                </View>
+                <View style={{ marginTop: space.base }}>
+                  {planToday.completed_at ? (
+                    <Text variant="label" tone="success">
+                      ✓ {t('plan.completed')}
+                    </Text>
+                  ) : (
+                    <Button title={t('home.start')} onPress={beginPlanDay} />
+                  )}
+                </View>
+              </>
+            )}
+          </Card>
+        ) : (
+          <Tap onPress={() => router.push(isPremium ? '/plan/setup' : '/plan')} scaleTo={0.985}>
+            <Card accent={colors.rank}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md }}>
+                <View style={{ flex: 1, gap: 2 }}>
+                  <Text variant="subheading">{isPremium ? t('plan.emptyTitle') : t('plan.teaserTitle')}</Text>
+                  <Text variant="caption" tone="muted">
+                    {isPremium ? t('plan.emptySub') : t('plan.teaserSub')}
+                  </Text>
+                </View>
+                {isPremium ? null : (
+                  <View
+                    style={{
+                      paddingHorizontal: space.sm,
+                      paddingVertical: 3,
+                      borderRadius: radius.xs,
+                      backgroundColor: `${colors.rank}26`,
+                    }}
+                  >
+                    <Text variant="caption" tone="rank">
+                      Premium
+                    </Text>
+                  </View>
+                )}
+              </View>
+            </Card>
+          </Tap>
+        )}
+      </Reveal>
+
+      {/* ---- კეგელი ---- */}
+      <Reveal index={7}>
+        <Tap onPress={() => router.push('/kegel')} scaleTo={0.985} style={{ marginTop: space.md }}>
+          <Card accent={zoneTheme.pelvic_floor}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md }}>
+              <View style={{ flex: 1, gap: 2 }}>
+                <Text variant="subheading">{t('kegel.title')}</Text>
+                <Text variant="caption" tone="muted">
+                  {t('kegel.bannerHint')}
+                </Text>
+              </View>
+              <Text variant="heading" style={{ color: zoneTheme.pelvic_floor }}>
+                ▶
+              </Text>
+            </View>
+          </Card>
+        </Tap>
+      </Reveal>
+
+      {/* ---- Streak ---- */}
+      <Reveal index={8}>
+        <SectionHeader title={t('home.weekProgress')} />
+      </Reveal>
+
+      <Reveal index={9}>
         <StreakCard
           days={stats.data?.streak_days ?? 0}
           longest={stats.data?.longest_streak ?? 0}
@@ -254,7 +380,7 @@ export default function TodayScreen() {
         />
       </Reveal>
 
-      <Reveal index={7}>
+      <Reveal index={10}>
         <View style={{ flexDirection: 'row', gap: space.sm, marginTop: space.md }}>
           <StatTile label={t('profile.sessions')} value={stats.data?.sessions ?? 0} />
           <StatTile label={t('player.duration')} value={stats.data?.minutes ?? 0} unit={t('common.min')} />
@@ -268,7 +394,7 @@ export default function TodayScreen() {
 
       {/* ---- კუნთების რუკა ---- */}
       {stats.data?.muscle_load && Object.keys(stats.data.muscle_load).length > 0 ? (
-        <Reveal index={8}>
+        <Reveal index={11}>
           <SectionHeader title={t('home.muscleMap')} />
           <Card>
             <MuscleMap load={stats.data.muscle_load} />

@@ -2,6 +2,17 @@ export type Locale = 'ka' | 'ru' | 'en';
 export type ForceKey = 'push' | 'pull' | 'static' | 'legs' | 'core';
 export type Unit = 'reps' | 'seconds';
 export type Tempo = 'normal' | 'slow';
+export type Zone =
+  | 'chest'
+  | 'back'
+  | 'shoulders'
+  | 'arms'
+  | 'core'
+  | 'legs'
+  | 'pelvic_floor'
+  | 'full_body'
+  | 'mobility';
+export type SessionSource = 'program' | 'plan' | 'kegel' | 'freestyle' | 'test';
 export type VerificationTier = 0 | 1 | 2 | 3;
 
 export interface ExerciseMediaItem {
@@ -22,6 +33,7 @@ export interface Exercise {
   name: string;
   short_desc: string | null;
   category: string;
+  zone: Zone | null;
   force: ForceKey;
   mechanic: 'compound' | 'isolation';
   unit: Unit;
@@ -69,6 +81,7 @@ export interface PlannedExercise {
     slug: string;
     name: string | null;
     unit: Unit;
+    zone?: Zone | null;
     force: ForceKey;
     difficulty_coef: number;
     media: ExerciseMediaItem[];
@@ -100,6 +113,7 @@ export interface MeResponse {
     country_code: string;
     is_guest: boolean;
     social_enabled: boolean;
+    subscription?: SubscriptionState;
     phone?: string | null;
     email?: string | null;
     profile: {
@@ -231,11 +245,12 @@ export interface SyncSetPayload {
 export interface SyncSessionPayload {
   client_uuid: string;
   program_day_id?: number | null;
+  plan_day_id?: number | null;
   spot_checkin_id?: number | null;
   started_at: string;
   completed_at?: string | null;
   duration_ms?: number;
-  source: 'program' | 'freestyle' | 'test';
+  source: SessionSource;
   device_clock_offset_ms?: number;
   sets: SyncSetPayload[];
 }
@@ -259,4 +274,62 @@ export interface SessionSyncResult {
 export interface SessionSyncResponse {
   results: SessionSyncResult[];
   user_totals: { xp_total: number; xp_today: number; streak_days: number; level: number };
+}
+
+/* ---- premium ($1/თვე) — სტატუსი მხოლოდ სერვერიდან ---- */
+
+export interface SubscriptionState {
+  is_premium: boolean;
+  status: 'active' | 'cancelled' | 'billing_issue' | 'expired' | null;
+  provider: 'revenuecat' | 'manual' | null;
+  product_id: string | null;
+  expires_at: string | null;
+  will_renew: boolean;
+}
+
+/* ---- კალენდარის პლანერი ---- */
+
+export type PlanIntensity = 'light' | 'moderate' | 'intense';
+export type PlanLocation = 'home' | 'yard' | 'gym';
+export type PlanSplit = 'full' | 'upper' | 'lower' | 'push' | 'pull' | 'legs';
+
+export interface PlanScheduleItem {
+  /** ISO: 1 = ორშაბათი … 7 = კვირა */
+  weekday: number;
+  location: PlanLocation;
+}
+
+export interface PlanDay {
+  id: number;
+  date: string;
+  week_no: number;
+  weekday: number;
+  type: 'workout' | 'rest';
+  split: PlanSplit | null;
+  location: PlanLocation | null;
+  focus: Zone[];
+  est_minutes: number | null;
+  is_deload: boolean;
+  completed_at: string | null;
+  exercises: PlannedExercise[];
+}
+
+export interface TrainingPlan {
+  id: number;
+  intensity: PlanIntensity;
+  level: number;
+  schedule: PlanScheduleItem[];
+  weeks: number;
+  starts_on: string;
+  ends_on: string;
+  today: string;
+  stats: { workouts: number; completed: number };
+  days: PlanDay[];
+}
+
+export interface PlanCreateRequest {
+  schedule: PlanScheduleItem[];
+  intensity: PlanIntensity;
+  weeks: number;
+  starts_on?: string;
 }

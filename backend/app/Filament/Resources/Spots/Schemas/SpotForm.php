@@ -32,6 +32,21 @@ class SpotForm
                     KeyValue::make('description')->keyLabel('locale')->valueLabel('აღწერა')->columnSpan(3),
                 ]),
 
+            Section::make('კონტაქტი და წყარო')
+                ->columns(3)
+                ->schema([
+                    TextInput::make('address')->label('მისამართი')->maxLength(255)->columnSpan(2),
+                    TextInput::make('phone')->label('ტელეფონი')->maxLength(64),
+                    TextInput::make('website')->label('ვებსაიტი')->url()->maxLength(255)->columnSpan(2),
+                    TextInput::make('opening_hours')->label('სამუშაო საათები')->maxLength(255)
+                        ->helperText('OSM opening_hours ფორმატი, მაგ. Mo-Su 08:00-24:00'),
+                    Select::make('source')->label('წყარო')->options([
+                        'seed' => 'seed', 'ugc' => 'UGC', 'osm' => 'OpenStreetMap', 'web' => 'ვებ (ოფიციალური საიტი)',
+                    ]),
+                    TextInput::make('external_id')->label('გარე ID')->maxLength(64)->unique(ignoreRecord: true)
+                        ->helperText('osm:node/123 — ხელახლა იმპორტი ამ გასაღებით ანახლებს რიგს')->columnSpan(2),
+                ]),
+
             Section::make('კოორდინატები')
                 ->description('PostGIS GEOGRAPHY(POINT, 4326). შენახვისას ხელახლა იწერება ერთი ST_MakePoint-ით.')
                 ->columns(2)

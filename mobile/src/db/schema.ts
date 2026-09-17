@@ -14,11 +14,12 @@ export const localSessions = sqliteTable(
   {
     clientUuid: text('client_uuid').primaryKey(),
     programDayId: integer('program_day_id'),
+    planDayId: integer('plan_day_id'),
     spotCheckinId: integer('spot_checkin_id'),
     startedAt: text('started_at').notNull(),
     completedAt: text('completed_at'),
     durationMs: integer('duration_ms').notNull().default(0),
-    source: text('source', { enum: ['program', 'freestyle', 'test'] }).notNull(),
+    source: text('source', { enum: ['program', 'plan', 'kegel', 'freestyle', 'test'] }).notNull(),
     deviceClockOffsetMs: integer('device_clock_offset_ms').notNull().default(0),
 
     /** pending → synced | rejected. სესია immutable-ია, კონფლიქტი შეუძლებელია. */

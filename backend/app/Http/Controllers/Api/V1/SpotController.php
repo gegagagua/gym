@@ -87,6 +87,7 @@ class SpotController extends Controller
             'city_id' => $data['city_id'] ?? null,
             'description' => $data['description'] ?? null,
             'status' => 'pending',
+            'source' => 'ugc',
             'created_by_user_id' => $request->user()->id,
         ], (float) $data['lat'], (float) $data['lng']);
 

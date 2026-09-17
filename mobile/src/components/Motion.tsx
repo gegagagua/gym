@@ -259,6 +259,50 @@ export function Pop({
 }
 
 /* ------------------------------------------------------------------ *
+ *  გაიდ-რიტმი
+ * ------------------------------------------------------------------ */
+
+/**
+ * კუნთის „შეკუმშვა" ეკრანზე — კეგელის გაიდი. `level` 0 (მოდუნებული) … 1
+ * (სრული შეკუმშვა); ყოველი ცვლილება `ms`-ში აღწევს ახალ მნიშვნელობას,
+ * ასე რიტმი ტაიმერთან ემთხვევა. `scale` — წრე, `lift` — „ჰამაკის" აწევა.
+ * მრუდი inOut: შეკუმშვა და მოდუნება გლუვია, ხტუნვის გარეშე.
+ */
+export function Squeeze({
+  children,
+  level,
+  ms,
+  mode = 'scale',
+  min = 0.62,
+  lift = 26,
+  style,
+}: {
+  children: ReactNode;
+  level: number;
+  ms: number;
+  mode?: 'scale' | 'lift';
+  min?: number;
+  lift?: number;
+  style?: StyleProp<ViewStyle>;
+}) {
+  const value = useSharedValue(level);
+
+  useEffect(() => {
+    value.value = withTiming(level, { duration: Math.max(ms, duration.fast), easing: easing.inOut });
+
+    return () => cancelAnimation(value);
+  }, [level, ms, value]);
+
+  const animated = useAnimatedStyle(() =>
+    mode === 'scale'
+      ? { transform: [{ scale: interpolate(value.value, [0, 1], [min, 1], Extrapolation.CLAMP) }] }
+      : { transform: [{ translateY: interpolate(value.value, [0, 1], [0, -lift], Extrapolation.CLAMP) }] },
+  );
+
+  return <Animated.View style={[style, animated]}>{children}</Animated.View>;
+}
+
+/* ------------------------------------------------------------------ *
  *  ჩატვირთვა
  * ------------------------------------------------------------------ */
 

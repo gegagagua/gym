@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
-import { View, FlatList, TextInput } from 'react-native';
+import { View, FlatList, SectionList, TextInput } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 import { Image } from 'expo-image';
 import { Screen, Text, Card, Chip, Tap, Button, Reveal, SlideUp, SkeletonRows, Pop } from '@/components';
-import { colors, forceTheme, radius, space, border, gutter, type ForceKey } from '@/theme';
+import { colors, forceTheme, zoneTheme, radius, space, border, gutter, type ZoneKey } from '@/theme';
 import { exercises as exercisesApi, me as meApi } from '@/api/endpoints';
 import { resolveLoop } from '@/lib/media';
 import { useFreestyle, FREESTYLE_MIN_EXERCISES } from '@/store/freestyle';
@@ -13,13 +13,14 @@ import { usePlayer } from '@/store/player';
 import { useAuth } from '@/store/auth';
 import type { Exercise } from '@/api/types';
 
-const FORCES: ForceKey[] = ['push', 'pull', 'static', 'legs', 'core'];
+/** ბიბლიოთეკის თანმიმდევრობა — სერვერის Exercise::ZONES */
+const ZONES: ZoneKey[] = ['chest', 'back', 'shoulders', 'arms', 'core', 'legs', 'full_body', 'pelvic_floor', 'mobility'];
 
 export default function LibraryScreen() {
   const { t } = useTranslation();
   const router = useRouter();
   const [query, setQuery] = useState('');
-  const [force, setForce] = useState<ForceKey | null>(null);
+  const [zone, setZone] = useState<ZoneKey | null>(null);
   const [onlyMyGear, setOnlyMyGear] = useState(false);
 
   const basket = useFreestyle();
@@ -45,14 +46,31 @@ export default function LibraryScreen() {
     const needle = query.trim().toLowerCase();
 
     return all.filter((exercise) => {
-      if (force && exercise.force !== force) return false;
+      if (zone && exercise.zone !== zone) return false;
       if (!needle) return true;
       return (
         exercise.name.toLowerCase().includes(needle) ||
         exercise.slug.toLowerCase().includes(needle)
       );
     });
-  }, [data, query, force]);
+  }, [data, query, zone]);
+
+  // ფილტრის გარეშე — ზონების სექციები; ძებნა ან ზონა — ერთი სია
+  const grouped = !zone && !query.trim();
+  const sections = useMemo(
+    () =>
+      ZONES.map((key) => ({ key, data: filtered.filter((exercise) => exercise.zone === key) })).filter(
+        (section) => section.data.length > 0,
+      ),
+    [filtered],
+  );
+
+  const listPadding = {
+    padding: gutter,
+    paddingTop: space.md,
+    // კალათის ზოლი სიის ბოლო რიგს არ უნდა ფარავდეს
+    paddingBottom: basket.items.length > 0 ? 190 : space.huge,
+  };
 
   const startFreestyle = () => {
     if (!basket.ready()) return;
@@ -69,7 +87,7 @@ export default function LibraryScreen() {
   };
 
   return (
-    <Screen scroll={false} ambient={force ? forceTheme[force] : colors.rank} padded={false}>
+    <Screen scroll={false} ambient={zone ? zoneTheme[zone] : colors.rank} padded={false}>
       <Reveal from="top" distance={10} style={{ paddingHorizontal: gutter, gap: space.md }}>
         <Text variant="title">{t('library.title')}</Text>
 
@@ -94,7 +112,7 @@ export default function LibraryScreen() {
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
-          data={[null, ...FORCES]}
+          data={[null, ...ZONES]}
           keyExtractor={(item) => item ?? 'all'}
           contentContainerStyle={{ gap: space.sm, paddingVertical: space.xxs }}
           ListHeaderComponent={
@@ -111,50 +129,95 @@ export default function LibraryScreen() {
           }
           renderItem={({ item }) => (
             <Chip
-              label={item ? t(`library.force_${item}`) : t('common.all')}
-              selected={force === item}
-              tint={item ? forceTheme[item] : colors.accent}
-              onPress={() => setForce(item)}
+              label={item ? t(`library.zone_${item}`) : t('common.all')}
+              selected={zone === item}
+              tint={item ? zoneTheme[item] : colors.accent}
+              onPress={() => setZone(item)}
             />
           )}
         />
       </Reveal>
 
-      <FlatList
-        data={filtered}
-        keyExtractor={(item) => String(item.id)}
-        contentContainerStyle={{
-          padding: gutter,
-          paddingTop: space.md,
-          gap: space.sm,
-          // კალათის ზოლი სიის ბოლო რიგს არ უნდა ფარავდეს
-          paddingBottom: basket.items.length > 0 ? 190 : space.huge,
-        }}
-        showsVerticalScrollIndicator={false}
-        ListEmptyComponent={
-          isLoading ? (
-            <SkeletonRows rows={6} height={82} gap={space.sm} />
-          ) : (
-            <Reveal style={{ marginTop: space.xxl }}>
-              <Text variant="bodySm" tone="muted" center>
-                {t('library.empty')}
-              </Text>
+      {zone === 'pelvic_floor' ? (
+        <View style={{ paddingHorizontal: gutter, paddingTop: space.md }}>
+          <GuidedBanner onPress={() => router.push('/kegel')} />
+        </View>
+      ) : null}
+
+      {grouped && !isLoading ? (
+        <SectionList
+          sections={sections}
+          keyExtractor={(item) => String(item.id)}
+          stickySectionHeadersEnabled={false}
+          contentContainerStyle={listPadding}
+          showsVerticalScrollIndicator={false}
+          renderSectionHeader={({ section }) => (
+            <Tap onPress={() => setZone(section.key)} style={{ marginTop: space.lg, marginBottom: space.sm }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.sm }}>
+                <View style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: zoneTheme[section.key] }} />
+                <Text variant="overline" style={{ flex: 1, color: zoneTheme[section.key] }}>
+                  {t(`library.zone_${section.key}`)} · {section.data.length}
+                </Text>
+                {section.key === 'pelvic_floor' ? (
+                  <Tap onPress={() => router.push('/kegel')} hitSlop={10}>
+                    <Text variant="label" style={{ color: zoneTheme.pelvic_floor }}>
+                      ▶ {t('library.guided')}
+                    </Text>
+                  </Tap>
+                ) : (
+                  <Text variant="caption" tone="muted">
+                    {t('library.seeAll')} →
+                  </Text>
+                )}
+              </View>
+            </Tap>
+          )}
+          renderItem={({ item, index, section }) => {
+            // კასკადი მხოლოდ პირველ ეკრანზე (პირველი სექციის პირველი რიგები)
+            const first = section.key === sections[0]?.key;
+            return (
+              <Reveal index={first && index < 6 ? index : 0} distance={10} style={{ marginBottom: space.sm }}>
+                <ExerciseRow
+                  exercise={item}
+                  selected={basket.has(item.id)}
+                  onPress={() => router.push(`/exercise/${item.id}`)}
+                  onToggle={() => basket.toggle(item)}
+                />
+              </Reveal>
+            );
+          }}
+        />
+      ) : (
+        <FlatList
+          data={filtered}
+          keyExtractor={(item) => String(item.id)}
+          contentContainerStyle={{ ...listPadding, gap: space.sm }}
+          showsVerticalScrollIndicator={false}
+          ListEmptyComponent={
+            isLoading ? (
+              <SkeletonRows rows={6} height={82} gap={space.sm} />
+            ) : (
+              <Reveal style={{ marginTop: space.xxl }}>
+                <Text variant="bodySm" tone="muted" center>
+                  {t('library.empty')}
+                </Text>
+              </Reveal>
+            )
+          }
+          renderItem={({ item, index }) => (
+            // კასკადი მხოლოდ პირველ ეკრანზე — გადახვევისას რიგი შეყოვნების
+            // გარეშე ჩნდება, თორემ სია „ჩამორჩება“ თითს
+            <Reveal index={index < 8 ? index : 0} distance={10}>
+              <ExerciseRow
+                exercise={item}
+                selected={basket.has(item.id)}
+                onPress={() => router.push(`/exercise/${item.id}`)}
+                onToggle={() => basket.toggle(item)}
+              />
             </Reveal>
-          )
-        }
-        renderItem={({ item, index }) => (
-          // კასკადი მხოლოდ პირველ ეკრანზე — გადახვევისას რიგი შეყოვნების
-          // გარეშე ჩნდება, თორემ სია „ჩამორჩება“ თითს
-          <Reveal index={index < 8 ? index : 0} distance={10}>
-            <ExerciseRow
-              exercise={item}
-              selected={basket.has(item.id)}
-              onPress={() => router.push(`/exercise/${item.id}`)}
-              onToggle={() => basket.toggle(item)}
-            />
-          </Reveal>
-        )}
-      />
+          )}
+        />
+      )}
 
       {/* ---- თავისუფალი ვარჯიშის კალათა ---- */}
       <SlideUp
@@ -212,7 +275,7 @@ function ExerciseRow({
   onToggle: () => void;
 }) {
   const { t } = useTranslation();
-  const tint = forceTheme[exercise.force] ?? colors.accent;
+  const tint = (exercise.zone ? zoneTheme[exercise.zone] : forceTheme[exercise.force]) ?? colors.accent;
   const loop = resolveLoop(exercise.media);
 
   return (
@@ -267,7 +330,7 @@ function ExerciseRow({
 
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md }}>
               <Text variant="caption" tone="muted">
-                {t(`library.force_${exercise.force}`)}
+                {exercise.zone ? t(`library.zone_${exercise.zone}`) : t(`library.force_${exercise.force}`)}
               </Text>
               <Text variant="caption" tone="muted">
                 L{exercise.level_min}–{exercise.level_max}
@@ -299,6 +362,29 @@ function ExerciseRow({
               </View>
             </Pop>
           </Tap>
+        </View>
+      </Card>
+    </Tap>
+  );
+}
+
+function GuidedBanner({ onPress }: { onPress: () => void }) {
+  const { t } = useTranslation();
+  const tint = zoneTheme.pelvic_floor;
+
+  return (
+    <Tap onPress={onPress} scaleTo={0.985} haptic="medium">
+      <Card accent={tint}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md }}>
+          <View style={{ flex: 1, gap: 2 }}>
+            <Text variant="subheading">{t('kegel.title')}</Text>
+            <Text variant="caption" tone="muted">
+              {t('kegel.bannerHint')}
+            </Text>
+          </View>
+          <Text variant="heading" style={{ color: tint }}>
+            ▶
+          </Text>
         </View>
       </Card>
     </Tap>

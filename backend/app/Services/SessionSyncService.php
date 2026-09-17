@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Exercise;
 use App\Models\SpotCheckin;
+use App\Models\TrainingPlanDay;
 use App\Models\User;
 use App\Models\WorkoutSession;
 use App\Services\Xp\XpCalculator;
@@ -58,13 +59,15 @@ class SessionSyncService
         }
 
         $checkin = $this->resolveCheckin($user, $raw['spot_checkin_id'] ?? null);
+        $planDay = $this->resolvePlanDay($user, $raw['plan_day_id'] ?? null);
         $startedAt = Carbon::parse($raw['started_at']);
         $completedAt = isset($raw['completed_at']) ? Carbon::parse($raw['completed_at']) : null;
 
-        return DB::transaction(function () use ($user, $raw, $clientUuid, $checkin, $startedAt, $completedAt) {
+        return DB::transaction(function () use ($user, $raw, $clientUuid, $checkin, $planDay, $startedAt, $completedAt) {
             $session = WorkoutSession::create([
                 'user_id' => $user->id,
                 'program_day_id' => $raw['program_day_id'] ?? null,
+                'plan_day_id' => $planDay?->id,
                 'spot_checkin_id' => $checkin?->id,
                 'started_at' => $startedAt,
                 'completed_at' => $completedAt,
@@ -97,6 +100,11 @@ class SessionSyncService
             ]);
 
             $session->refresh()->load('sets.exercise');
+
+            // პლანის დღე ჩაითვლება მხოლოდ ჩაჯდა სესიით — rejected (FLAG_TOO_THIN) ზემოთ უკვე დაბრუნდა
+            if ($planDay && ! $planDay->completed_at) {
+                $planDay->update(['session_id' => $session->id, 'completed_at' => $session->completed_at ?? now()]);
+            }
 
             $xpResult = $this->xp->calculate($session);
             $newRecords = $this->records->sync($session);
@@ -153,6 +161,18 @@ class SessionSyncService
         return SpotCheckin::with('spot')
             ->where('id', $checkinId)
             ->where('user_id', $user->id)
+            ->first();
+    }
+
+    /** პლანის დღე მხოლოდ საკუთარი და აქტიური პლანიდან */
+    private function resolvePlanDay(User $user, ?int $dayId): ?TrainingPlanDay
+    {
+        if (! $dayId) {
+            return null;
+        }
+
+        return TrainingPlanDay::where('id', $dayId)
+            ->whereHas('plan', fn ($q) => $q->where('user_id', $user->id))
             ->first();
     }
 

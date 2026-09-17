@@ -46,6 +46,7 @@ export async function flushQueue(): Promise<{ synced: number; failed: number } |
     payload.push({
       client_uuid: session.clientUuid,
       program_day_id: session.programDayId,
+      plan_day_id: session.planDayId,
       spot_checkin_id: session.spotCheckinId,
       started_at: session.startedAt,
       completed_at: session.completedAt,

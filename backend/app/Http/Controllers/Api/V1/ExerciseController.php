@@ -22,7 +22,7 @@ class ExerciseController extends Controller
             'pull_up_bar', 'low_bar', 'parallel_bars', 'wall_bars', 'rings',
             'monkey_bars', 'horizontal_ladder', 'bench', 'rope',
         ],
-        'gym' => SpotEquipment::TAGS,
+        'gym' => [...SpotEquipment::TAGS, ...Exercise::GYM_TAGS],
     ];
 
     public function index(Request $request)
@@ -37,6 +37,10 @@ class ExerciseController extends Controller
             $query->whereIn('category', explode(',', $category));
         }
 
+        if ($zone = $request->query('zone')) {
+            $query->whereIn('zone', explode(',', $zone));
+        }
+
         if ($group = $request->query('skill_group')) {
             $query->where('skill_group', $group);
         }
@@ -47,7 +51,7 @@ class ExerciseController extends Controller
 
         // ინვენტარი: აჩვენე ის, რაც მომხმარებლის აღჭურვილობით შესრულებადია
         if ($equipment = $request->query('equipment')) {
-            $tags = $this->expandEquipment(explode(',', $equipment));
+            $tags = self::expandEquipment(explode(',', $equipment));
             $query->where(function ($q) use ($tags) {
                 $q->whereJsonLength('equipment', 0)->orWhereNull('equipment');
                 foreach ($tags as $tag) {
@@ -70,8 +74,12 @@ class ExerciseController extends Controller
         );
     }
 
-    /** @param  list<string>  $values  წვდომის დონეები ან ფიზიკური ტეგები — ორივე მიიღება */
-    private function expandEquipment(array $values): array
+    /**
+     * @param  list<string>  $values  წვდომის დონეები ან ფიზიკური ტეგები — ორივე მიიღება
+     *
+     * პლანერიც (PlanGenerator) ამას იძახის — ლექსიკონის თარგმანი ერთ ადგილას რჩება.
+     */
+    public static function expandEquipment(array $values): array
     {
         $tags = [];
 

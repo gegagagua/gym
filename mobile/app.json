@@ -4,7 +4,7 @@
     "slug": "gym",
     "owner": "devslick",
     "scheme": "kalisteni",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
@@ -73,6 +73,11 @@
     "experiments": { "typedRoutes": true, "reactCompiler": true },
     "extra": {
       "apiUrl": "https://digitalfix.cloud/gym/api/v1",
+      "revenuecat": { "iosApiKey": "", "androidApiKey": "" },
+      "legal": {
+        "termsUrl": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+        "privacyUrl": ""
+      },
       "eas": { "projectId": "2a2f7f5e-1571-4924-961d-2adac952af2b" }
     },
     "runtimeVersion": { "policy": "appVersion" },

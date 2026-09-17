@@ -36,6 +36,11 @@ export class ApiError extends Error {
     return this.payload?.errors ?? {};
   }
 
+  /** EnsurePremium middleware — paywall-ის ტრიგერი */
+  get needsPremium() {
+    return this.status === 402 && this.payload?.code === 'premium_required';
+  }
+
   get isOffline() {
     return this.status === 0;
   }

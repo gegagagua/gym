@@ -22,6 +22,12 @@ class SpotResource extends JsonResource
             'condition_rating' => $this->averageRating(),
             'has_lighting' => (bool) $this->has_lighting,
             'status' => $this->status,
+            // დეტალ-ბარათისთვის; nearby სია ამ ველებს განზრახ არ აბრუნებს
+            'source' => $this->source,
+            'address' => $this->address,
+            'phone' => $this->phone,
+            'website' => $this->website,
+            'opening_hours' => $this->opening_hours,
             'checkin_count' => (int) $this->checkin_count,
             'equipment' => $this->whenLoaded('equipment', fn () => $this->equipment->pluck('equipment_tag')),
             'photos' => $this->whenLoaded('media', fn () => $this->media

@@ -22,6 +22,7 @@ export function initDatabase() {
     CREATE TABLE IF NOT EXISTS local_sessions (
       client_uuid TEXT PRIMARY KEY NOT NULL,
       program_day_id INTEGER,
+      plan_day_id INTEGER,
       spot_checkin_id INTEGER,
       started_at TEXT NOT NULL,
       completed_at TEXT,
@@ -73,6 +74,13 @@ export function initDatabase() {
       value TEXT NOT NULL
     );
   `);
+
+  // v1.1 — პლანის დღე. CREATE IF NOT EXISTS ძველ ინსტალაციაზე სვეტს
+  // არ დაამატებს, რიგში მყოფი სესიები კი დაკარგვის ღირსი არ არის
+  const columns = sqlite.getAllSync<{ name: string }>('PRAGMA table_info(local_sessions)');
+  if (!columns.some((column) => column.name === 'plan_day_id')) {
+    sqlite.execSync('ALTER TABLE local_sessions ADD COLUMN plan_day_id INTEGER');
+  }
 }
 
 export { schema };

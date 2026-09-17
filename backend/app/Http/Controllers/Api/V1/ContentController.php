@@ -80,7 +80,11 @@ class ContentController extends Controller
         ]);
     }
 
-    /** ატრიბუციის ეკრანი — ავტომატურად exercise_media-დან (სპეც. 13.1) */
+    /**
+     * ატრიბუციის ეკრანი — ავტომატურად exercise_media-დან (სპეც. 13.1).
+     * OSM-იდან იმპორტირებული მოედნები ODbL-ს ითხოვს — იგივე ფორმის
+     * ერთი დამატებითი რიგი, ასე ძველი კლიენტი ცვლილების გარეშე აჩვენებს.
+     */
     public function attributions()
     {
         $rows = DB::table('exercise_media')
@@ -91,7 +95,21 @@ class ContentController extends Controller
             ->orderBy('attribution_text')
             ->get();
 
-        return response()->json(['data' => $rows]);
+        $hasOsmSpots = DB::table('spots')
+            ->where('source', 'osm')
+            ->where('status', 'verified')
+            ->whereNull('deleted_at')
+            ->exists();
+
+        if ($hasOsmSpots) {
+            $rows->push((object) [
+                'license' => 'odbl',
+                'attribution_text' => '© OpenStreetMap contributors',
+                'source_url' => 'https://www.openstreetmap.org/copyright',
+            ]);
+        }
+
+        return response()->json(['data' => $rows->values()]);
     }
 
     public function cities()
